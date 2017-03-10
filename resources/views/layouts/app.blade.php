@@ -185,23 +185,20 @@
                                   <!-- The user image in the menu -->
                                   <li class="user-header">
                                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                                    <p>
-                                      Alexander Pierce - Web Developer
-                                      <small>Member since Nov. 2012</small>
-                                    </p>
+                                    <h4>Alexander Pierce - Web Developer</h4>
+                                    <h5><i>Member since Nov. 2012</i></h5>
                                   </li>
                                   <!-- Menu Body -->
                                   <li class="user-body">
                                     <div class="row">
                                       <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
+                                        <a href="#">Tasks</a>
                                       </div>
                                       <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
+                                        <a href="#">Leaves</a>
                                       </div>
                                       <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
+                                        <a href="#">Timesheet</a>
                                       </div>
                                     </div>
                                     <!-- /.row -->
