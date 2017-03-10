@@ -98,6 +98,16 @@
     margin-top: 10px;
 }
 
+/*Button Profile & Sign out*/
+a.btn.btn-default.btn-flat.btn_info:hover {
+    background-color: rgba(205, 216, 222, 0.6)!important;
+}
+
+a.info:hover{
+  background-color: rgba(205, 216, 222, 0.6)!important;
+  padding: 8px;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
