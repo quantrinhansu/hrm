@@ -47,20 +47,23 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-
-                    
-
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'hrmsystem') }}
                     </a>
                 </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+               <div class="navbar-header">
+                   <div class="dropdown">
+                  <button class="dropbtn">Employee</button>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+                </div>
+                <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse"> -->
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -75,7 +78,9 @@
                             <span class="sr-only">Toggle navigation</span>
                           </a>
                           <!-- Navbar Right Menu -->
+
                           <div class="navbar-custom-menu">
+
                             <ul class="nav navbar-nav">
                               <!-- Messages: style can be found in dropdown.less-->
                               <li class="dropdown messages-menu">
@@ -224,7 +229,7 @@
                         </header>
                         @endif
                     </ul>
-                </div>
+                
 
             </div>
 
