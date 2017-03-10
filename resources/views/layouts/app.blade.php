@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
     @yield('customjs')
     <!-- Scripts -->
     <script>
@@ -197,13 +198,13 @@
                                   <li class="user-body">
                                     <div class="row">
                                       <div class="col-xs-4 text-center">
-                                        <a href="#">Tasks</a>
+                                        <a href="#" class="info">Tasks</a>
                                       </div>
                                       <div class="col-xs-4 text-center">
-                                        <a href="#">Leaves</a>
+                                        <a href="#" class="info">Leaves</a>
                                       </div>
                                       <div class="col-xs-4 text-center">
-                                        <a href="#">Timesheet</a>
+                                        <a href="#" class="info">Timesheet</a>
                                       </div>
                                     </div>
                                     <!-- /.row -->
@@ -211,11 +212,11 @@
                                   <!-- Menu Footer-->
                                   <li class="user-footer">
                                     <div class="pull-left">
-                                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                      <a href="#" class="btn btn-default btn-flat btn_info"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                                     </div>
                                     <div class="pull-right">
                                       <a href="{{ route('logout') }}"  onclick="event.preventDefault();
-                                                                         document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">Sign out</a>
+                                                                         document.getElementById('logout-form').submit();" class="btn btn-default btn-flat btn_info"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a>
                                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                                 {{ csrf_field() }}
                                                             </form>                                                     
