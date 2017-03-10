@@ -42,8 +42,8 @@
         ]) !!};
     </script>
 </head>
-<body>
-    <div id="app">
+<body class="skin-blue layout-boxed sidebar-mini" style="height: 100%;">
+    <div class="wrapper" style="overflow: hidden; height: 100%;">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -225,14 +225,16 @@
                         @endif
                     </ul>
                 </div>
+
             </div>
+
         </nav>
         @yield('content')
+        <div class="footer">
+            Copyright HRM System @2017
+        </div>
     </div>
-
-    <div class="footer">
-        Copyright HRM System @2017
-    </div>
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 
