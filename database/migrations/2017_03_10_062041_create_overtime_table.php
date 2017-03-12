@@ -22,7 +22,6 @@ class CreateOvertimeTable extends Migration
             $table->string('from'); 
             $table->string('to');   
             $table->string('description');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

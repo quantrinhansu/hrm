@@ -19,7 +19,6 @@ class CreateInsuranceTable extends Migration
             $table->integer('employee_id')->references('id')->on('employees');  
             $table->string('name'); 
             $table->string('percentage');   
-            $table->rememberToken();
             $table->timestamps();
         });
     }

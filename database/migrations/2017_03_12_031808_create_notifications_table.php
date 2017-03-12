@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdvanceSalaryTable extends Migration
+class CreateNotificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateAdvanceSalaryTable extends Migration
      */
     public function up()
     {
-        Schema::create('advance_salary', function(Blueprint $table)
+        Schema::create('notifications', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('employee_id')->references('id')->on('employees');  
-            $table->string('title');    
-            $table->string('amount');   
-            $table->date('date');   
-            $table->string('approval_status');  
-            $table->string('description');  
+            $table->string('type'); 
+            $table->string('desc'); 
+            $table->string('from'); 
+            $table->string('to');  
             $table->timestamps();
         });
     }

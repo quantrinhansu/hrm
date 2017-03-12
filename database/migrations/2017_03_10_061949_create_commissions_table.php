@@ -20,7 +20,6 @@ class CreateCommissionsTable extends Migration
             $table->string('title');    
             $table->string('amount');   
             $table->string('description');  
-            $table->rememberToken();
             $table->timestamps();
         });
     }

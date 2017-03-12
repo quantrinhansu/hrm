@@ -21,7 +21,6 @@ class CreateEmployeeRelativesTable extends Migration
             $table->string('address');  
             $table->string('phone_number'); 
             $table->string('relation');
-            $table->rememberToken();
             $table->timestamps();
         });
     }

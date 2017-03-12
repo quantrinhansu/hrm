@@ -59,6 +59,9 @@
                     </a>
                 </div>
                  <!-- dropdown -->
+                 @if (Auth::guest())
+                           <!-- nothing are here -->
+                  @else
                 <ul class="nav navbar-nav" id="mainNav">
                   <li>
                     <a href="#" class="menu_text">Home</a>
@@ -139,7 +142,7 @@
                         </div>
                   </li>
                 </ul>
-
+                @endif
                <!--  end dropdown -->
 
                 <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse"> -->

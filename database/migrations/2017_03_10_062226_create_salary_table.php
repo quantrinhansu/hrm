@@ -27,8 +27,7 @@ class CreateSalaryTable extends Migration
             $table->string('commission_id')->references('id')->on('commissions');   
             $table->string('insurance_id')->references('id')->on('insurance');  
             $table->string('overtime_id')->references('id')->on('overtime');    
-            $table->string('loan_id')->on('loan');  
-            $table->rememberToken();
+            $table->string('loan_id')->on('loan');
             $table->timestamps();
         });
     }

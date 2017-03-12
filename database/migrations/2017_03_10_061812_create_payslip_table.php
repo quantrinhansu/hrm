@@ -19,7 +19,6 @@ class CreatePayslipTable extends Migration
             $table->integer('employee_id')->references('id')->on('employees');  
             $table->string('title');    
             $table->string('description');  
-            $table->rememberToken();
             $table->timestamps();
         });
     }

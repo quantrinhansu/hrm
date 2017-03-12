@@ -25,7 +25,6 @@ class CreateLoansTable extends Migration
             $table->string('remaining_amount'); 
             $table->string('approval_status');  
             $table->string('description');  
-            $table->rememberToken();
             $table->timestamps();
         });
     }
