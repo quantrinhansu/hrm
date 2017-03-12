@@ -53,16 +53,54 @@
                         {{ config('app.name', 'hrmsystem') }}
                     </a>
                 </div>
-               <div class="navbar-header">
-                <div class="dropdown">
-                    <button class="dropbtn">Employee</button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                </div>
+                 <!-- dropdown -->
+                <ul class="nav navbar-nav">
+                  <li>
+                       <div class="parent_menu">                                   
+                          <div class="dropdown">
+                              <a href="#" >Home</a>
+                            <ul class="dropdown-menu submenu_employee">
+                              <h2 class="name">Employees</h2>
+                              <li>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                 <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                  </li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+
+               <!--  end dropdown -->
+
                 <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse"> -->
                     <!-- Left Side Of Navbar -->
 
