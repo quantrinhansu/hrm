@@ -14,9 +14,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -54,13 +54,13 @@
                     </a>
                 </div>
                <div class="navbar-header">
-                   <div class="dropdown">
-                  <button class="dropbtn">Employee</button>
-                  <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                  </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Employee</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
                 </div>
                 </div>
                 <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse"> -->
@@ -70,7 +70,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Please Login !</a></li>
+                            <li><a href="#" class="plslogin">Please Login !</a></li>
                         @else
                         <header class="main-header">
                         <!-- Header Navbar -->
@@ -197,14 +197,14 @@
                                   <!-- Menu Body -->
                                   <li class="user-body">
                                     <div class="row">
-                                      <div class="col-xs-4 text-center">
-                                        <a href="#" class="info">Tasks</a>
+                                      <div class="col-xs-5 text-center">
+                                        <a href="#" class="info"> Timesheet</a>
+                                      </div>
+                                      <div class="col-xs-3 text-center">
+                                        <a href="#" class="info"> Leaves</a>
                                       </div>
                                       <div class="col-xs-4 text-center">
-                                        <a href="#" class="info">Leaves</a>
-                                      </div>
-                                      <div class="col-xs-4 text-center">
-                                        <a href="#" class="info">Timesheet</a>
+                                        <a href="#" class="info"> Tasks</a>
                                       </div>
                                     </div>
                                     <!-- /.row -->
