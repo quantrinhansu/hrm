@@ -4,6 +4,22 @@ body{
     overflow-y: hidden;
 }
 
+
+table.font_table{
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;   
+}
+
+.color_h3{
+    color: blue;
+}
+th.table_info{
+    padding-left: 100px;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+/*.navbar {
+      margin-bottom: 0px!important;
+}*/
 /*profile*/
 .content-wrapper{
     margin-left: 0!important;
