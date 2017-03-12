@@ -49,7 +49,7 @@
 
 </head>
 <body class="skin-blue layout-boxed sidebar-mini" style="height: 100%;" >
-    <div class="wrapper" style="overflow: hidden; height: 100%;">
+    <div class="wrapper">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -294,7 +294,7 @@
                                   <!-- Menu Footer-->
                                   <li class="user-footer">
                                     <div class="pull-left">
-                                      <a href="#" class="btn btn-default btn-flat btn_info"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                      <a href="profile" class="btn btn-default btn-flat btn_info"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                                     </div>
                                     <div class="pull-right">
                                       <a href="{{ route('logout') }}"  onclick="event.preventDefault();
@@ -318,9 +318,7 @@
 
         </nav>
         @yield('content')
-        <div class="footer">
-            Copyright HRM System @2017
-        </div>
+
     </div>
     
     <!-- Scripts -->
