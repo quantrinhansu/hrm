@@ -16,7 +16,7 @@ class CreateSalaryTable extends Migration
         Schema::create('salary', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('employee_id')->references('id')->on('employees');  
+            $table->integer('user_id')->references('id')->on('users');  
             $table->integer('accepter_id')->references('id')->on('admin');  
             $table->string('description');  
             $table->string('type'); 

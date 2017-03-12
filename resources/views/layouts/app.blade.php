@@ -317,9 +317,6 @@
 
         </nav>
         @yield('content')
-<!--         <div id="footer">
-      hrm
-    </div> -->
     </div>
     
     <!-- Scripts -->

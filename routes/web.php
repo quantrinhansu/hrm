@@ -20,3 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('profile', 'HomeController@getProfile');
+
+Route::get('users/{id}', 'UserController@show');
+// Route::post('users/{id}', '');

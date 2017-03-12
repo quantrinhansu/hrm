@@ -16,7 +16,7 @@ class CreateCommissionsTable extends Migration
         Schema::create('commissions', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('employee_id')->references('id')->on('employees');  
+            $table->integer('user_id')->references('id')->on('users');  
             $table->string('title');    
             $table->string('amount');   
             $table->string('description');  

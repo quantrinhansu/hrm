@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\UserController;
 
 class HomeController extends Controller
 {
@@ -27,7 +28,14 @@ class HomeController extends Controller
     }
 
     public function getProfile(){
-        return view('pages.profile');
+        $out = (new UserController)->show($id);
+        return view('pages.profile',compact("out",$out));
+    }
+
+    public function getAvatar($id)
+    {
+        $out = (new UserController)->show($id);
+        return $out;
     }
     
 }

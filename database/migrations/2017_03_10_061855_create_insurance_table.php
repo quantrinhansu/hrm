@@ -16,7 +16,7 @@ class CreateInsuranceTable extends Migration
         Schema::create('insurance', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('employee_id')->references('id')->on('employees');  
+            $table->integer('user_id')->references('id')->on('users');  
             $table->string('name'); 
             $table->string('percentage');   
             $table->timestamps();

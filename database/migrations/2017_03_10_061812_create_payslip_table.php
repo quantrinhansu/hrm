@@ -16,7 +16,7 @@ class CreatePayslipTable extends Migration
         Schema::create('payslip', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('employee_id')->references('id')->on('employees');  
+            $table->integer('user_id')->references('id')->on('users');  
             $table->string('title');    
             $table->string('description');  
             $table->timestamps();

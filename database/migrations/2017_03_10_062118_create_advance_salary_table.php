@@ -16,7 +16,7 @@ class CreateAdvanceSalaryTable extends Migration
         Schema::create('advance_salary', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('employee_id')->references('id')->on('employees');  
+            $table->integer('user_id')->references('id')->on('users');  
             $table->string('title');    
             $table->string('amount');   
             $table->date('date');   
