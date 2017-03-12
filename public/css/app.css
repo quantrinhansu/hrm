@@ -1,3 +1,36 @@
+/*new dropdown*/
+.parent_menu{
+    position: relative;
+}
+
+.submenu_employee{
+position: absolute;
+width: 630px;
+height: 230px;
+border: 1px solid black;
+margin-left: 30px;
+display: none;
+}
+
+.parent_menu:hover .submenu_employee{
+display: block;
+}
+
+.menu_ul{
+padding-left:50px;
+padding-right:10px;
+position:relative;
+width:200px;
+float:left;
+list-style-type:none;
+}
+
+.name{
+margin-left: 20px;
+}
+
+/*end new dropdown*/
+
 .dropbtn {
     background-color: transparent;
     color: white;
@@ -146,6 +179,7 @@ a.info:hover{
   background-color: rgba(205, 216, 222, 0.6)!important;
   padding: 8px;
 }
+
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
