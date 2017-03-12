@@ -28,14 +28,11 @@ class HomeController extends Controller
     }
 
     public function getProfile(){
-        $out = (new UserController)->show($id);
-        return view('pages.profile',compact("out",$out));
+        return view('pages.profile');
     }
 
     public function getAvatar($id)
     {
-        $out = (new UserController)->show($id);
-        return $out;
     }
     
 }
