@@ -95,6 +95,7 @@
               <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
               <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
               <li><a href="#settings" data-toggle="tab">Settings</a></li>
+              <li><a href="#user_info" data-toggle="tab">User info</a></li>
             </ul>
             <div class="tab-content">
               <div class="active tab-pane" id="activity">
@@ -360,6 +361,101 @@
                     </div>
                   </div>
                 </form>
+              </div>
+              <!-- /.tab-pane -->
+              <div class="tab-pane" id="user_info">
+                <h3 class="color_h3">User Infomation</h3>
+                <table class="font_table table">
+                  <tr>
+                    <th>User Name:</th>
+                    <th class="table_info">admin </th>
+                  </tr>
+                  <tr class="active">
+                    <th>Email Adress:</th>
+                    <th class="table_info">admin@gmail.com</th>
+                  </tr>
+                  <tr>
+                    <th>Employee Type:</th>
+                    <th class="table_info">admin </th>
+                  </tr>
+                  <tr class="active">
+                    <th>Employee Category:</th>
+                    <th class="table_info">admin </th>
+                  </tr>
+                  <tr>
+                    <th>Designation:</th>
+                    <th class="table_info">admin </th>
+                  </tr>
+                  <tr class="active">
+                    <th>Station:</th>
+                    <th class="table_info">admin </th>
+                  </tr>
+                  <tr>
+                    <th>Department:</th>
+                    <th class="table_info">admin </th>
+                  </tr>
+                  <tr class="active">
+                    <th>Grade:</th>
+                    <th class="table_info">1</th>
+                  </tr>
+                  <tr>
+                    <th>Work Shift:</th>
+                    <th class="table_info">admin </th>
+                  </tr>
+                </table>
+                <h3 class="color_h3">Personal Information</h3>
+                  <table class="font_table table">
+                    <tr class="active">
+                      <th>Salutation</th>
+                      <th class="table_info">Mr.</th>
+                    </tr>
+                    <tr>
+                      <th>First Name:</th>
+                      <th class="table_info">Mr.</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Last Name:</th>
+                      <th class="table_info">Mr.</th>
+                    </tr>
+                    <tr>
+                      <th>Gender</th>
+                      <th class="table_info">Mr.</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Date of Birth</th>
+                      <th class="table_info">Mr.</th>
+                    </tr>
+                    <tr>
+                      <th>Nationality</th>
+                      <th class="table_info">Mr.</th>
+                    </tr>
+                  </table>
+                <h3 class="color_h3">Contact Numbers</h3>
+                <table class="font_table table">
+                  <tr class="active">
+                    <th>Mobile Number:</th>
+                    <th class="table_info">1/2</th>
+                  </tr>
+                  <tr>
+                    <th>Home Phone Number: </th>
+                    <th class="table_info">1/2</th>
+                  </tr>
+                </table>
+                <h3 class="color_h3">Emergency Contact</h3>
+                <table class="font_table table">
+                  <tr class="active">
+                    <th>Emergency Contact:</th>
+                    <th class="table_info">12</th>
+                  </tr>
+                  <tr>
+                    <th>RelationShip:</th>
+                    <th class="table_info">12</th>
+                  </tr>
+                  <tr class="active">
+                    <th>Phone Number:</th>
+                    <th class="table_info">12</th>
+                  </tr>
+                </table>
               </div>
               <!-- /.tab-pane -->
             </div>
