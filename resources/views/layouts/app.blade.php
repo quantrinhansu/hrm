@@ -41,9 +41,14 @@
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
+
+
+
     </script>
+
+
 </head>
-<body class="skin-blue layout-boxed sidebar-mini" style="height: 100%;">
+<body class="skin-blue layout-boxed sidebar-mini" style="height: 100%;" >
     <div class="wrapper" style="overflow: hidden; height: 100%;">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -54,11 +59,50 @@
                     </a>
                 </div>
                  <!-- dropdown -->
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" id="mainNav">
                   <li>
-                       <div class="parent_menu">                                   
+                    <a href="#" class="menu_text">Home</a>
+                       <div class="parent_menu" >                                   
                           <div class="dropdown">
-                              <a href="#" >Home</a>
+                            <ul class="dropdown-menu submenu_employee" id="menu1">
+                              <h2 class="name">Employees</h2>
+                              <li>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                 <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                  </li>
+                  <li>
+                    <a href="#" class="menu_text">Employee</a>
+                       <div class="parent_menu" >                                   
+                          <div class="dropdown">
                             <ul class="dropdown-menu submenu_employee">
                               <h2 class="name">Employees</h2>
                               <li>
@@ -94,9 +138,6 @@
                           </div>
                         </div>
                   </li>
-                  <li><a href="#">Page 1</a></li>
-                  <li><a href="#">Page 2</a></li>
-                  <li><a href="#">Page 3</a></li>
                 </ul>
 
                <!--  end dropdown -->
@@ -281,6 +322,7 @@
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.1.1.min.js') }}"></script>
 
 </body>
 </html>
