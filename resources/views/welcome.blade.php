@@ -82,7 +82,11 @@
                 </div>
 
                 <div class="links">
+                @if (Auth::check())
+                    <a href="/login">Home</a>
+                @else   
                     <a href="/login">Login Now</a>
+                @endif   
                 </div>
             </div>
         </div>

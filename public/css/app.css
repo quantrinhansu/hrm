@@ -1,36 +1,10 @@
-/*new dropdown*/
-.parent_menu{
-    position: relative;
+.plslogin{
+  color: #ffffff!important;
 }
-
-.submenu_employee{
-position: absolute;
-width: 630px;
-height: 230px;
-border: 1px solid black;
-margin-left: 30px;
-display: none;
+.text-center .info{
+   padding-right: 5px!important;
+    padding-left: 5px!important;
 }
-
-.parent_menu:hover .submenu_employee{
-display: block;
-}
-
-.menu_ul{
-padding-left:50px;
-padding-right:10px;
-position:relative;
-width:200px;
-float:left;
-list-style-type:none;
-}
-
-.name{
-margin-left: 20px;
-}
-
-/*end new dropdown*/
-
 .dropbtn {
     background-color: transparent;
     color: white;
@@ -177,9 +151,8 @@ a.btn.btn-default.btn-flat.btn_info:hover {
 
 a.info:hover{
   background-color: rgba(205, 216, 222, 0.6)!important;
-  padding: 8px;
+  padding: 5px;
 }
-
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)

@@ -14,9 +14,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -34,8 +34,6 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-  
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
     @yield('customjs')
     <!-- Scripts -->
@@ -55,53 +53,16 @@
                         {{ config('app.name', 'hrmsystem') }}
                     </a>
                 </div>
-                <!-- dropdown -->
-                <ul class="nav navbar-nav">
-                  <li>
-                       <div class="parent_menu">                                   
-                          <div class="dropdown">
-                              <a href="#" >Home</a>
-                            <ul class="dropdown-menu submenu_employee">
-                              <h2 class="name">Employees</h2>
-                              <li>
-                                <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                  </li>
-                  <li><a href="#">Page 1</a></li>
-                  <li><a href="#">Page 2</a></li>
-                  <li><a href="#">Page 3</a></li>
-                </ul>
-
-               <!--  end dropdown -->
+               <div class="navbar-header">
+                <div class="dropdown">
+                    <button class="dropbtn">Employee</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                </div>
                 <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse"> -->
                     <!-- Left Side Of Navbar -->
 
@@ -109,7 +70,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Please Login !</a></li>
+                            <li><a href="#" class="plslogin">Please Login !</a></li>
                         @else
                         <header class="main-header">
                         <!-- Header Navbar -->
@@ -236,14 +197,14 @@
                                   <!-- Menu Body -->
                                   <li class="user-body">
                                     <div class="row">
-                                      <div class="col-xs-4 text-center">
-                                        <a href="#" class="info">Tasks</a>
+                                      <div class="col-xs-5 text-center">
+                                        <a href="#" class="info"> Timesheet</a>
+                                      </div>
+                                      <div class="col-xs-3 text-center">
+                                        <a href="#" class="info"> Leaves</a>
                                       </div>
                                       <div class="col-xs-4 text-center">
-                                        <a href="#" class="info">Leaves</a>
-                                      </div>
-                                      <div class="col-xs-4 text-center">
-                                        <a href="#" class="info">Timesheet</a>
+                                        <a href="#" class="info"> Tasks</a>
                                       </div>
                                     </div>
                                     <!-- /.row -->
