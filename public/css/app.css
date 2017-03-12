@@ -1,13 +1,17 @@
 body{
   font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: 400;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
+}
+
+.navbar {
+      margin-bottom: 0px!important;
 }
 /*profile*/
 .content-wrapper{
     margin-left: 0!important;
 }
+
 /*
 new dropdown
 */
@@ -62,6 +66,20 @@ ul#mainNav li ul li:hover{
 .name{
     margin-left: 20px;
 }
+
+/*#footer {
+    margin-top: -2px; 
+    position: absolute;
+    top: expression(documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight));
+    color: #ffffff;
+    background-color: rgba(31, 69, 103, 0.79)!important;
+    right: 0px;
+    left: 0px;
+    padding: 1rem;
+    opacity: 1;
+    background-color: #efefef;
+    text-align: center;
+}*/
 /*end dropdown*/
 .plslogin{
     color: #ffffff!important;
@@ -84,17 +102,7 @@ ul#mainNav li ul li:hover{
 .skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side{
     background-color: #ffffff!important;
 }
-/*footer*/
-/*.footer {
-    position: absolute;
-    overflow-y: s
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;
-}*/
+
 /*login*/
 .form-signin
 {

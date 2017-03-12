@@ -49,12 +49,13 @@
 
 </head>
 <body class="skin-blue layout-boxed sidebar-mini" style="height: 100%;" >
-    <div class="wrapper">
+
+    <div class="wrapper" >
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('home') }}">
                         {{ config('app.name', 'hrmsystem') }}
                     </a>
                 </div>
@@ -64,7 +65,7 @@
                   @else
                 <ul class="nav navbar-nav" id="mainNav">
                   <li>
-                    <a href="#" class="menu_text">Home</a>
+                    <a href="#" class="menu_text">Salary</a>
                        <div class="parent_menu" >                                   
                           <div class="dropdown">
                             <ul class="dropdown-menu submenu_employee" id="menu1">
@@ -312,13 +313,13 @@
                         </header>
                         @endif
                     </ul>
-                
-
             </div>
 
         </nav>
         @yield('content')
-
+<!--         <div id="footer">
+      hrm
+    </div> -->
     </div>
     
     <!-- Scripts -->
