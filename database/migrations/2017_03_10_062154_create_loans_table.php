@@ -22,7 +22,8 @@ class CreateLoansTable extends Migration
             $table->date('repayment_start_date');   
             $table->string('amount');   
             $table->string('monthly_of_interest');  
-            $table->string('remaining_amount'); 
+            $table->string('remaining_amount');
+            $table->integer('accepter_id');               
             $table->string('approval_status');  
             $table->string('description');  
             $table->timestamps();

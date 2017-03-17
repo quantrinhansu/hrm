@@ -2,17 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-use App\User;
-use Auth;
 
-class UserController extends Controller
+class TaskController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -51,12 +44,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
-        $user = User::find($id);
-        if ($user) {
-            return view('pages.profile', ['user' => $user]);
-        }
-       return view('pages.404');
+    {
+        //
     }
 
     /**
@@ -90,7 +79,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $out = User::destroy($id);
-        return $out;
+        //
     }
 }
