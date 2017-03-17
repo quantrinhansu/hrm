@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use App\Employee_relatives;
 
 class UserController extends Controller
 {
@@ -53,8 +54,9 @@ class UserController extends Controller
     public function show($id)
     {   
         $user = User::find($id);
+        $employee_relatives = Employee_relatives::where('user_id', '=', $id)->first();
         if ($user) {
-            return view('pages.profile', ['user' => $user]);
+            return view('pages.profile', ['user' => $user, 'employee_relatives' => $employee_relatives]);
         }
     }
 
