@@ -56,7 +56,6 @@ class UserController extends Controller
         if ($user) {
             return view('pages.profile', ['user' => $user]);
         }
-       return view('pages.404');
     }
 
     /**
