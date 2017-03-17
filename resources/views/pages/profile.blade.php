@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{ dd($user->toJson()) }}
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -23,8 +22,7 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="images/default_login.png" alt="User profile picture">
               <h3 class="profile-username text-center">{{ $user->first_name }} {{ $user->last_name }}</h3>
-
-              <p class="text-muted text-center">{{dd($user->departments->manager)}}</p>
+              <p class="text-muted text-center">{{$user->departments->name}}</p>
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
@@ -57,7 +55,7 @@
               </p>
               <hr>
               <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
-              <p class="text-muted">Malibu, California</p>
+              <p class="text-muted">{{$user->present_address}}</p>
               <hr>
               <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
               <p>
@@ -69,7 +67,7 @@
               </p>
               <hr>
               <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+              <p>{{$user->noted}}</p>
             </div>
             <!-- /.box-body -->
           </div>
@@ -354,95 +352,131 @@
                 <h3 class="color_h3">User Infomation</h3>
                 <table class="font_table table">
                   <tr>
-                    <th>User Name:</th>
-                    <th class="table_info">admin </th>
+                    <th>User Name</th>
+                    <th class="table_info">{{$user->name}}</th>
                   </tr>
                   <tr class="active">
-                    <th>Email Adress:</th>
-                    <th class="table_info">admin@gmail.com</th>
+                    <th>Email Adress</th>
+                    <th class="table_info">{{$user->email}}</th>
                   </tr>
                   <tr>
-                    <th>Employee Type:</th>
-                    <th class="table_info">admin </th>
+                    <th>Employee Type</th>
+                    <th class="table_info">{{$user->job_type}}</th>
                   </tr>
                   <tr class="active">
-                    <th>Employee Category:</th>
-                    <th class="table_info">admin </th>
+                    <th>Employee Category</th>
+                    <th class="table_info">{{$user->job_position}}</th>
                   </tr>
                   <tr>
-                    <th>Designation:</th>
-                    <th class="table_info">admin </th>
-                  </tr>
-                  <tr class="active">
-                    <th>Station:</th>
-                    <th class="table_info">admin </th>
-                  </tr>
-                  <tr>
-                    <th>Department:</th>
-                    <th class="table_info">admin </th>
-                  </tr>
-                  <tr class="active">
-                    <th>Grade:</th>
-                    <th class="table_info">1</th>
-                  </tr>
-                  <tr>
-                    <th>Work Shift:</th>
-                    <th class="table_info">admin </th>
+                    <th>Department</th>
+                    <th class="table_info">{{$user->departments->name}}</th>
                   </tr>
                 </table>
                 <h3 class="color_h3">Personal Information</h3>
                   <table class="font_table table">
-                    <tr class="active">
-                      <th>Salutation</th>
-                      <th class="table_info">Mr.</th>
-                    </tr>
                     <tr>
-                      <th>First Name:</th>
-                      <th class="table_info">Mr.</th>
+                      <th>First Name</th>
+                      <th class="table_info">{{$user->first_name}}</th>
                     </tr>
                     <tr class="active">
-                      <th>Last Name:</th>
-                      <th class="table_info">Mr.</th>
+                      <th>Last Name</th>
+                      <th class="table_info">{{$user->last_name}}</th>
                     </tr>
                     <tr>
                       <th>Gender</th>
-                      <th class="table_info">Mr.</th>
+                      <th class="table_info">
+                        @if($user->gender == 1)
+                          Male
+                        @else
+                          Female
+                        @endif
+                      </th>
                     </tr>
                     <tr class="active">
                       <th>Date of Birth</th>
-                      <th class="table_info">Mr.</th>
+                      <th class="table_info">{{$user->date_of_birth}}</th>
                     </tr>
                     <tr>
                       <th>Nationality</th>
-                      <th class="table_info">Mr.</th>
+                      <th class="table_info">{{$user->nationality}}</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Permanent address</th>
+                      <th class="table_info">{{$user->permanent_address}}</th>
+                    </tr>
+                    <tr>
+                      <th>Present address</th>
+                      <th class="table_info">{{$user->present_address}}</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Maritial status</th>
+                      <th class="table_info">{{$user->maritial_status}}</th>
+                    </tr>
+                    <tr>
+                      <th>Joining date</th>
+                      <th class="table_info">{{$user->joining_date}}</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Bank name</th>
+                      <th class="table_info">{{$user->bank_name}}</th>
+                    </tr>
+                    <tr>
+                      <th>Bank account name</th>
+                      <th class="table_info">{{$user->bank_account_name}}</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Insurance code</th>
+                      <th class="table_info">{{$user->insurance_code}}</th>
+                    </tr>
+                    <tr>
+                      <th>Tax code</th>
+                      <th class="table_info">{{$user->tax_code}}</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Noted</th>
+                      <th class="table_info">{{$user->noted}}</th>
+                    </tr>
+                    <tr>
+                      <th>Leave per month</th>
+                      <th class="table_info">{{$user->leave_per_month}}</th>
+                    </tr>
+                    <tr class="active">
+                      <th>Leave per year</th>
+                      <th class="table_info">{{$user->leave_per_year}}</th>
                     </tr>
                   </table>
                 <h3 class="color_h3">Contact Numbers</h3>
                 <table class="font_table table">
                   <tr class="active">
                     <th>Mobile Number:</th>
-                    <th class="table_info">1/2</th>
-                  </tr>
-                  <tr>
-                    <th>Home Phone Number: </th>
-                    <th class="table_info">1/2</th>
+                    <th class="table_info">{{$user->phone_number}}</th>
                   </tr>
                 </table>
                 <h3 class="color_h3">Emergency Contact</h3>
+
                 <table class="font_table table">
                   <tr class="active">
-                    <th>Emergency Contact:</th>
-                    <th class="table_info">12</th>
+                    <th class="table_info">Name</th>
+                    <th class="table_info">Address</th>
+                    <th class="table_info">Relationship</th>                   
+                    <th class="table_info">Phone number</th>                   
                   </tr>
-                  <tr>
-                    <th>RelationShip:</th>
-                    <th class="table_info">12</th>
-                  </tr>
-                  <tr class="active">
-                    <th>Phone Number:</th>
-                    <th class="table_info">12</th>
-                  </tr>
+                  <?php $i = 0 ?>
+                  @foreach($employee_relatives as $er)
+                    @if($i % 2 != 0)
+                      <tr class="active">
+                    @else
+                      <tr>
+                    @endif
+                        <th class="table_info">{{$er->full_name}}</th>
+                        <th class="table_info">{{$er->address}}</th>
+                        <th class="table_info">{{$er->relation}}</th>
+                        <th class="table_info">{{$er->phone_number}}</th>
+                      </tr>
+                    <?php $i++; ?>
+                    @endforeach
                 </table>
+              
               </div>
               <!-- /.tab-pane -->
             </div>
