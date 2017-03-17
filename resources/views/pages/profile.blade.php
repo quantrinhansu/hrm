@@ -22,8 +22,9 @@
           <div class="box box-primary">
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="images/default_login.png" alt="User profile picture">
-              <h3 class="profile-username text-center">Nina Mcintire</h3>
-              <p class="text-muted text-center">Software Engineer</p>
+              <h3 class="profile-username text-center">{{ $user->first_name }} {{ $user->last_name }}</h3>
+
+              <p class="text-muted text-center">{{dd($user->departments->manager)}}</p>
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
                   <b>Days off / month</b> <a class="pull-right">1,322</a>
