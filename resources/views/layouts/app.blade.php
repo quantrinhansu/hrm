@@ -458,7 +458,7 @@
                                   <!-- Menu Footer-->
                                   <li class="user-footer">
                                     <div class="pull-left">
-                                      <a href="profile" class="btn btn-default btn-flat btn_info"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                      <a href="profile/{{Auth::user()->id}}" class="btn btn-default btn-flat btn_info"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                                     </div>
                                     <div class="pull-right">
                                       <a href="{{ route('logout') }}"  onclick="event.preventDefault();

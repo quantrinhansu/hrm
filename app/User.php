@@ -27,5 +27,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $table = "users";
     
+    public function departments(){
+        return $this->belongsTo('App\Department', 'department_id');
+    }
 }

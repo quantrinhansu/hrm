@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{ dd($user) }}
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -28,7 +27,7 @@
 
               <h3 class="profile-username text-center">{{ $user->first_name }} {{ $user->last_name }}</h3>
 
-              <p class="text-muted text-center">Software Engineer</p>
+              <p class="text-muted text-center">{{dd($user->departments->manager)}}</p>
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
