@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+{{ dd($user) }}
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -25,7 +26,7 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="images/default_login.png" alt="User profile picture">
 
-              <h3 class="profile-username text-center">Nina Mcintire</h3>
+              <h3 class="profile-username text-center">{{ $user->first_name }} {{ $user->last_name }}</h3>
 
               <p class="text-muted text-center">Software Engineer</p>
 
