@@ -61,14 +61,64 @@
                 </div>
                  <!-- dropdown -->
                  @if (Auth::guest())
-                           <!-- nothing are here -->
+                           <!-- show info of company -->
+                  <ul class="nav navbar-nav" id="mainNav">
+                    <li>
+                      <a href="#" class="menu_text">Help</a>
+                         <div class="parent_menu" >                                   
+                            <div class="dropdown">
+                              <ul class="dropdown-menu submenu_employee" id="menu1">
+                                <h2 class="name">Organization</h2>
+                                <li>
+                                  <ul class="menu_ul">
+                                    <li><a href="#">Companies</a></li>
+                                    <li><a href="#">Stations</a></li>
+                                    <li><a href="#">Departments</a></li>
+                                    <li><a href="#">Projects</a></li>  
+                                  </ul>
+                                  <ul class="menu_ul">
+                                    <li><a href="#">Organization News</a></li>
+                                    <li><a href="#">Policies</a></li>
+                                    <li><a href="#">Announcements</a></li>
+                                    <li><a href="#">System Settings</a></li>
+                                  </ul>     
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                    </li>
+                  </ul>
                   @else
                 <ul class="nav navbar-nav" id="mainNav">
                   <li>
-                    <a href="#" class="menu_text">Salary</a>
+                    <a href="#" class="menu_text">Organization</a>
                        <div class="parent_menu" >                                   
                           <div class="dropdown">
                             <ul class="dropdown-menu submenu_employee" id="menu1">
+                              <h2 class="name">Organization</h2>
+                              <li>
+                                <ul class="menu_ul">
+                                  <li><a href="#">Companies</a></li>
+                                  <li><a href="#">Stations</a></li>
+                                  <li><a href="#">Departments</a></li>
+                                  <li><a href="#">Projects</a></li>  
+                                </ul>
+                                <ul class="menu_ul">
+                                  <li><a href="#">Organization News</a></li>
+                                  <li><a href="#">Policies</a></li>
+                                  <li><a href="#">Announcements</a></li>
+                                  <li><a href="#">System Settings</a></li>
+                                </ul>     
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                  </li>
+                  <li>
+                    <a href="#" class="menu_text">Recruitment</a>
+                       <div class="parent_menu" >                                   
+                          <div class="dropdown">
+                            <ul class="dropdown-menu submenu_employee">
                               <h2 class="name">Employees</h2>
                               <li>
                                 <ul class="menu_ul">
@@ -104,7 +154,124 @@
                         </div>
                   </li>
                   <li>
-                    <a href="#" class="menu_text">Employee</a>
+                    <a href="#" class="menu_text">Employees</a>
+                       <div class="parent_menu" >                                   
+                          <div class="dropdown">
+                            <ul class="dropdown-menu submenu_employee">
+                              <h2 class="name">Employees</h2>
+                              <li>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                 <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                  </li>
+                  <li>
+                    <a href="#" class="menu_text">Timesheet</a>
+                       <div class="parent_menu" >                                   
+                          <div class="dropdown">
+                            <ul class="dropdown-menu submenu_employee">
+                              <h2 class="name">Employees</h2>
+                              <li>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                 <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                  </li>
+                  <li>
+                    <a href="#" class="menu_text">Payroll</a>
+                       <div class="parent_menu" >                                   
+                          <div class="dropdown">
+                            <ul class="dropdown-menu submenu_employee">
+                              <h2 class="name">Employees</h2>
+                              <li>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                 <ul class="menu_ul">
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">HTML</a></li>
+                                  <li><a href="#">CSS</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                  <li><a href="#">JavaScript</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                  </li>
+                  <li>
+                    <a href="#" class="menu_text">Reports</a>
                        <div class="parent_menu" >                                   
                           <div class="dropdown">
                             <ul class="dropdown-menu submenu_employee">
