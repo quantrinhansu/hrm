@@ -22,7 +22,6 @@ class CreateLeavesTable extends Migration
             $table->string('type'); 
             $table->date('from');   
             $table->date('to'); 
-            $table->integer('accept');  
             $table->timestamps();
         });
     }

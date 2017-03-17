@@ -40,7 +40,8 @@ class CreateUsersTable extends Migration
             $table->string('team_id')->nullable();
             $table->string('job_type')->nullable();
             $table->string('noted')->nullable();
-            $table->string('total_leave_yearly')->default('1');  
+            $table->string('leave_per_month')->default('1'); 
+            $table->string('leave_per_year')->default('1');  
             $table->rememberToken();
             $table->timestamps();
         });

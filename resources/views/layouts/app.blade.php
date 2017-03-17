@@ -437,8 +437,8 @@
                                   <!-- The user image in the menu -->
                                   <li class="user-header">
                                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                    <h4>Alexander Pierce - Web Developer</h4>
-                                    <h5><i>Member since Nov. 2012</i></h5>
+                                    <h4> {{ Auth::user()->name  }} </h4>
+                                    <h5><i>{{ Auth::user()->job_position }} / {{ Auth::user()->team_id }}</i></h5>
                                   </li>
                                   <!-- Menu Body -->
                                   <li class="user-body">
