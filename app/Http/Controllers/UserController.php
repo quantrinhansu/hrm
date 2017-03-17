@@ -50,13 +50,11 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        $id = (int)$id;
-        if (Auth::user()->id === $id) {
-            $user = User::find($id);
-            return $user;
+    {   
+        $user = User::find($id);
+        if ($user) {
+            return view('pages.profile', ['user' => $user]);
         }
-        return 'You do not have permission to access';
     }
 
     /**

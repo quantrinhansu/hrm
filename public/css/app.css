@@ -12,11 +12,12 @@ table.font_table{
 .color_h3{
     color: blue;
 }
-th.table_info{
-    padding-left: 100px;
-    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-weight: 400;
+
+#user_info{
+    padding-left: 40px!important;
+    padding-right: 40px!important;
 }
+
 /*.navbar {
       margin-bottom: 0px!important;
 }*/

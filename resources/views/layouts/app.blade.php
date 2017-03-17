@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <base href="{{ asset('') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -41,12 +42,7 @@
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
-
-
-
     </script>
-
-
 </head>
 <body class="skin-blue layout-boxed sidebar-mini" style="height: 100%;" >
 

@@ -31,7 +31,7 @@
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Followers</b> <a class="pull-right">1,322</a>
+                  <b>Number of hours off</b> <a class="pull-right">16</a>
                 </li>
                 <li class="list-group-item">
                   <b>Following</b> <a class="pull-right">543</a>
