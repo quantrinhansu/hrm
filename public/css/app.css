@@ -4,7 +4,9 @@ body{
     overflow-y: hidden;
 }
 
-
+.btn.btn-primary.btn-block{
+    border-color: white;
+}
 table.font_table{
     font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;   
 }

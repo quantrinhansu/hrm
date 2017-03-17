@@ -31,17 +31,16 @@
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>Number of hours off</b> <a class="pull-right">16</a>
+                  <b>Days off / month</b> <a class="pull-right">1,322</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Following</b> <a class="pull-right">543</a>
+                  <b>Days off / Year</b> <a class="pull-right">543</a>
                 </li>
                 <li class="list-group-item">
                   <b>Friends</b> <a class="pull-right">13,287</a>
                 </li>
               </ul>
-
-              <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+              <a href="#" class="btn btn-primary btn-block"><b>Message</b></a>
             </div>
             <!-- /.box-body -->
           </div>
