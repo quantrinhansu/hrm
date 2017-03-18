@@ -59,6 +59,7 @@ class UserController extends Controller
         }
     }
 
+
     public function postUpdate(Request $request)
     {
         $id = $request->id;
@@ -80,6 +81,10 @@ class UserController extends Controller
                 'msg' => 'Setting created successfully',
             );
         }
-        return $id;
+    }
+
+    public function getAdd()
+    {
+        return view('pages.employees.add');
     }
 }
