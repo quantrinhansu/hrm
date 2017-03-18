@@ -33,4 +33,10 @@ class User extends Authenticatable
         return $this->belongsTo('App\Department', 'department_id');
     }
 
+    public static function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+    }
+
 }
