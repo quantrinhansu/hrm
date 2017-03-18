@@ -1,3 +1,9 @@
+#page-wrapper{
+    background-color: #ffffff;
+}
+.paginate{
+    background-color: #ffffff;
+}
 *{
     margin: 0px;
     padding: 0px;

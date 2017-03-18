@@ -44,7 +44,7 @@
         ]) !!};
     </script>
 </head>
-<body class="skin-blue layout-boxed sidebar-mini" style="height: 100%;" >
+<body class="skin-blue layout-boxed" style="height: 100%;" >
 
     <div class="wrapper" >
         <nav class="navbar navbar-default navbar-static-top">
@@ -445,7 +445,7 @@
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 
 </body>
 </html>
