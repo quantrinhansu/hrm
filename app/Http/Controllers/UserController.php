@@ -54,7 +54,7 @@ class UserController extends Controller
     public function show($id)
     {   
         $user = User::find($id);
-        $employee_relatives = Employee_relatives::where('user_id', '=', $id)->get();
+        $employee_relatives = Employee_relatives::where('user_id', '=', $id)->first();
         if ($user) {
             return view('pages.profile', ['user' => $user, 'employee_relatives' => $employee_relatives]);
         }
