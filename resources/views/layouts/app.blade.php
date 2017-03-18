@@ -67,16 +67,16 @@
                                 <h2 class="name">Organization</h2>
                                 <li>
                                   <ul class="menu_ul">
-                                    <li><a href="#">Companies</a></li>
-                                    <li><a href="#">Stations</a></li>
-                                    <li><a href="#">Departments</a></li>
-                                    <li><a href="#">Projects</a></li>  
+                                    <li class="li_header"><a href="#">Companies</a></li>
+                                    <li class="li_header"><a href="#">Stations</a></li>
+                                    <li class="li_header"><a href="#">Departments</a></li>
+                                    <li class="li_header"><a href="#">Projects</a></li>  
                                   </ul>
                                   <ul class="menu_ul">
-                                    <li><a href="#">Organization News</a></li>
-                                    <li><a href="#">Policies</a></li>
-                                    <li><a href="#">Announcements</a></li>
-                                    <li><a href="#">System Settings</a></li>
+                                    <li class="li_header"><a href="#">Organization News</a></li>
+                                    <li class="li_header"><a href="#">Policies</a></li>
+                                    <li class="li_header"><a href="#">Announcements</a></li>
+                                    <li class="li_header"><a href="#">System Settings</a></li>
                                   </ul>     
                                 </li>
                               </ul>
@@ -94,16 +94,16 @@
                               <h2 class="name">Organization</h2>
                               <li>
                                 <ul class="menu_ul">
-                                  <li><a href="#">Companies</a></li>
-                                  <li><a href="#">Stations</a></li>
-                                  <li><a href="#">Departments</a></li>
-                                  <li><a href="#">Projects</a></li>  
+                                  <li class="li_header"><a href="#">Companies</a></li>
+                                  <li class="li_header"><a href="#">Stations</a></li>
+                                  <li class="li_header"><a href="#">Departments</a></li>
+                                  <li class="li_header"><a href="#">Projects</a></li>  
                                 </ul>
                                 <ul class="menu_ul">
-                                  <li><a href="#">Organization News</a></li>
-                                  <li><a href="#">Policies</a></li>
-                                  <li><a href="#">Announcements</a></li>
-                                  <li><a href="#">System Settings</a></li>
+                                  <li class="li_header"><a href="#">Organization News</a></li>
+                                  <li class="li_header"><a href="#">Policies</a></li>
+                                  <li class="li_header"><a href="#">Announcements</a></li>
+                                  <li class="li_header"><a href="#">System Settings</a></li>
                                 </ul>     
                               </li>
                             </ul>
@@ -118,31 +118,16 @@
                               <h2 class="name">Employees</h2>
                               <li>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>               
                                 </ul>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
                               </li>
                             </ul>
@@ -150,38 +135,23 @@
                         </div>
                   </li>
                   <li>
-                    <a href="#" class="menu_text">Employees</a>
+                    <a href="employee" class="menu_text">Employees</a>
                        <div class="parent_menu" >                                   
                           <div class="dropdown">
                             <ul class="dropdown-menu submenu_employee">
                               <h2 class="name">Employees</h2>
                               <li>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="employee">Employees</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
                               </li>
                             </ul>
@@ -196,31 +166,16 @@
                               <h2 class="name">Employees</h2>
                               <li>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
                               </li>
                             </ul>
@@ -235,31 +190,16 @@
                               <h2 class="name">Employees</h2>
                               <li>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
+                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="#">JavaScript</a></li>
+                                  <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
                               </li>
                             </ul>

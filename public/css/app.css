@@ -51,6 +51,9 @@ table.font_table{
 /*
 new dropdown
 */
+li .li_header{
+    margin-bottom: 10px;
+}
 ul#mainNav > li:hover {
     background-color: rgba(225, 225, 255, 0.18)!important;
 }
@@ -79,10 +82,9 @@ ul#mainNav li ul li:hover{
 
 .submenu_employee{
     position: absolute;
-    width: 630px;
-    height: 230px;
+    width: 430px;
     border: 1px solid black;
-    margin-left: 30px;
+    margin-left: 10px;
     display: none;
     margin-top: 0px!important;
     border-top-width: 0px;
@@ -91,7 +93,7 @@ ul#mainNav li ul li:hover{
 
 
 .menu_ul{
-    padding-left:50px;
+    padding-left:30px;
     padding-right:10px;
     position:relative;
     width:200px;
