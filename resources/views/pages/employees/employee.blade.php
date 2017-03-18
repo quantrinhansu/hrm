@@ -35,7 +35,7 @@
                         <td><a href="">Message</a></td>
                         <td><a href="profile/{{$value->id}}">Profile</a></td>
                         <td class="center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href=""> Delete</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a id="{{$value->id}}" class="delete"> Delete</a></td>
              
                     </tr>
                 @endforeach
@@ -57,15 +57,25 @@
 			    <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
 		  	</div>
 		<div class="modal-body">
-		    <div class="form-group">
-		    	<input class="form-control " type="text" placeholder="Mohsin">
+		   <div class="form-group">
+		    	<label>Name</label>
+		    	<input class="form-control " type="text" placeholder="Enter a name">
 		    </div>
 		    <div class="form-group">
-		    
+		    	<label>Designation</label>
 		    	<input class="form-control " type="text" placeholder="Irshad">
 		    </div>
 		    <div class="form-group">
-		    	<textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
+		    	<label>Department</label>
+		    	<input class="form-control " type="text" placeholder="Irshad">
+		    </div>
+		    <div class="form-group">
+		    	<label>Email</label>
+		    	<input class="form-control " type="text" placeholder="Irshad">
+		    </div>
+		    <div class="form-group">
+		    	<label>Phone Number</label>
+		    	<input class="form-control " type="text" placeholder="Irshad">
 		    </div>
 		</div>
 		<div class="modal-footer ">
@@ -82,11 +92,5 @@
 <div class="paginate" align="center">
 			 {!!$employee->render()!!}
 </div>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		alert(1);
-	});
-</script>
 @endsection
 

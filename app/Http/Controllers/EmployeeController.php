@@ -11,6 +11,12 @@ class EmployeeController extends Controller
     {
     	$employee = User::all();
     	$employee = User::paginate(5);
-    	return view('pages.employee', ['employee' => $employee]);
+    	return view('pages.employees.employee', ['employee' => $employee]);
+    }
+
+    public function postUpdate($id)
+    {
+    	$employee = User::find($id);
+    	return $employee->id;
     }
 }
