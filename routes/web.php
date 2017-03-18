@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('profile/{id}', 'UserController@show');
+
+Route::get('employee', 'EmployeeController@getList');
