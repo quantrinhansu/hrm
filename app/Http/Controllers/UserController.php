@@ -89,9 +89,23 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+
+    public function getList()
     {
-        $out = User::destroy($id);
-        return $out;
+        $employee = User::all();
+        $employee = User::paginate(5);
+        return view('pages.employees.employee', ['employee' => $employee]);
+    }
+
+    public function postDelete(Request $request)
+    {
+        $out = User::destroy($request->id);
+        if ($out) {
+            return $response = array(
+            'status' => 'success',
+            'msg' => 'Setting created successfully',
+        );
+        }
+        
     }
 }

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(".delete").click(function(){
+	$("#delete").click(function(){
 		var id = $(this).attr('id');
 		$.ajaxSetup({
 		    headers: {
@@ -9,11 +9,12 @@ $(document).ready(function(){
 
 		$.ajax({
 			type: 'POST',
-			url: 'employee/update',
+			url: '/employee/delete',
 			dataType: 'text',
 			data: {id: id},
 			success:function(data){
-				alert(data);
+				$('#tr' + id).fadeOut();
+
 			}
 		});
 	});

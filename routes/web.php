@@ -21,5 +21,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('profile/{id}', 'UserController@show');
 
-Route::get('employee', 'EmployeeController@getList');
-Route::post('employee/update', 'EmployeeController@postUpdate');
+Route::get('/employee', 'UserController@getList');
+
+Route::post('/employee/delete', 'UserController@postDelete');
