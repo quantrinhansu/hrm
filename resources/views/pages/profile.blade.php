@@ -22,8 +22,13 @@
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="images/default_login.png" alt="User profile picture">
               <h3 class="profile-username text-center">{{ $user->first_name }} {{ $user->last_name }}</h3>
-              <p class="text-muted text-center">{{$user->departments->name}}</p>
-
+              <p class="text-muted text-center">
+                @if($user->departments['name'] == null)
+                --Not added yet--
+                @else
+                {{ $user->departments['name'] }} 
+              </p>
+                @endif
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
                   <b>Days off / month</b> <a class="pull-right">1,322</a>
@@ -35,7 +40,11 @@
                   <b>Friends</b> <a class="pull-right">13,287</a>
                 </li>
               </ul>
+              @if(Auth::user()->id === $user->id )
+              <a href="#" class="btn btn-info btn-block"><b>Static</b></a>
+              @else
               <a href="#" class="btn btn-primary btn-block"><b>Message</b></a>
+              @endif
             </div>
             <!-- /.box-body -->
           </div>
@@ -297,38 +306,38 @@
               <div class="tab-pane" id="settings">
                 <form class="form-horizontal">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
-
+                    <label for="inputName" class="col-sm-2 control-label">Display Name</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name">
+                      <input type="email" class="form-control" id="inputName" value="{{ Auth::user()->name }}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <label for="inputEmail" class="col-sm-2 control-label">Education</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="email" class="form-control" id="inputEmail" >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+                    <label for="inputExperience" class="col-sm-2 control-label">Location</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+                      <input class="form-control" id="inputExperience" value="{{ $user->present_address }}" >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+                    <label for="inputName" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                      <input type="text" class="form-control" id="inputName" >
                     </div>
                   </div>
+                  
                   <div class="form-group">
                     <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                      <input type="text" class="form-control" id="inputSkills" >
                     </div>
                   </div>
                   <div class="form-group">
@@ -369,7 +378,7 @@
                   </tr>
                   <tr>
                     <th>Department</th>
-                    <th class="table_info">{{$user->departments->name}}</th>
+                    <th class="table_info">{{$user->departments['name']}}</th>
                   </tr>
                 </table>
                 <h3 class="color_h3">Personal Information</h3>
@@ -437,11 +446,11 @@
                       <th class="table_info">{{$user->noted}}</th>
                     </tr>
                     <tr>
-                      <th>Leave per month</th>
+                      <th>Leave/month</th>
                       <th class="table_info">{{$user->leave_per_month}}</th>
                     </tr>
                     <tr class="active">
-                      <th>Leave per year</th>
+                      <th>Leave/year</th>
                       <th class="table_info">{{$user->leave_per_year}}</th>
                     </tr>
                   </table>
@@ -462,6 +471,7 @@
                     <th class="table_info">Phone number</th>                   
                   </tr>
                   <?php $i = 0 ?>
+                  @if(is_array($employee_relatives) || is_object($employee_relatives))
                   @foreach($employee_relatives as $er)
                     @if($i % 2 != 0)
                       <tr class="active">
@@ -475,6 +485,7 @@
                       </tr>
                     <?php $i++; ?>
                     @endforeach
+                    @endif
                 </table>
               
               </div>

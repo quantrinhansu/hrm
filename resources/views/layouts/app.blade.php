@@ -189,45 +189,6 @@
                         </div>
                   </li>
                   <li>
-                    <a href="#" class="menu_text">Timesheet</a>
-                       <div class="parent_menu" >                                   
-                          <div class="dropdown">
-                            <ul class="dropdown-menu submenu_employee">
-                              <h2 class="name">Employees</h2>
-                              <li>
-                                <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                                 <ul class="menu_ul">
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">HTML</a></li>
-                                  <li><a href="#">CSS</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                  <li><a href="#">JavaScript</a></li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                  </li>
-                  <li>
                     <a href="#" class="menu_text">Payroll</a>
                        <div class="parent_menu" >                                   
                           <div class="dropdown">
@@ -484,7 +445,7 @@
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
 
 </body>
 </html>
