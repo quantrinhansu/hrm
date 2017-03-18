@@ -1,10 +1,74 @@
+.main-row{
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+}
+.search-row{
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+    margin-bottom: 20px!important;
+}
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 18px;
+}
+
+
+#page-wrapper{
+    background-color: #ffffff;
+}
+.paginate{
+    background-color: #ffffff;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.btn_add{
+    float:right;
+    margin-right: 20px;
+    margin-bottom: 20px!important;
+}
+th {
+    text-align:  center!important;
+}
+
 body{
   font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: 400;
     overflow-y: hidden;
 }
 
-
+.btn.btn-primary.btn-block{
+    border-color: white;
+}
 table.font_table{
     font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;   
 }
@@ -29,6 +93,9 @@ table.font_table{
 /*
 new dropdown
 */
+li .li_header{
+    margin-bottom: 10px;
+}
 ul#mainNav > li:hover {
     background-color: rgba(225, 225, 255, 0.18)!important;
 }
@@ -57,10 +124,9 @@ ul#mainNav li ul li:hover{
 
 .submenu_employee{
     position: absolute;
-    width: 630px;
-    height: 230px;
+    width: 430px;
     border: 1px solid black;
-    margin-left: 30px;
+    margin-left: 10px;
     display: none;
     margin-top: 0px!important;
     border-top-width: 0px;
@@ -69,7 +135,7 @@ ul#mainNav li ul li:hover{
 
 
 .menu_ul{
-    padding-left:50px;
+    padding-left:30px;
     padding-right:10px;
     position:relative;
     width:200px;

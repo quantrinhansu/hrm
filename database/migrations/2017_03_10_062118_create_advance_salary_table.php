@@ -20,6 +20,7 @@ class CreateAdvanceSalaryTable extends Migration
             $table->string('title');    
             $table->string('amount');   
             $table->date('date');   
+            $table->integer('accepter_id');  
             $table->string('approval_status');  
             $table->string('description');  
             $table->timestamps();
