@@ -106,6 +106,10 @@ class UserController extends Controller
             'msg' => 'Setting created successfully',
         );
         }
-        
+    }
+
+    public function getAdd()
+    {
+        return view('pages.employees.add');
     }
 }
