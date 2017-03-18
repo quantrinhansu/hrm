@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-require_once 'C:\xampp\htdocs\hrm\vendor\fzaninotto\faker\src\autoload.php';
+require_once base_path(). '\vendor\fzaninotto\faker\src\autoload.php';
 
 class UsersTableSeeder extends Seeder
 {
