@@ -19,9 +19,7 @@
                         <th>Email</th>   
                         <th>Phone Number</th>
                         <th>Direct Message</th>
-                        <th>Action</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th colspan="3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
