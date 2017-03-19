@@ -288,10 +288,10 @@
                       <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
 
                       <div class="timeline-body">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
                       </div>
                     </div>
                   </li>
@@ -332,7 +332,17 @@
                       <input type="text" class="form-control" id="inputName" >
                     </div>
                   </div>
-                  
+                  <div class="form-group">
+                  <label for="inputName" class="col-sm-2 control-label">Date of birth</label>
+                  <div class="col-sm-10">
+                  <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker" readonly>
+                  </div>
+                </div>
+                  </div>
                   <div class="form-group">
                     <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
 
