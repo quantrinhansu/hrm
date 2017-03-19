@@ -28,6 +28,7 @@ $(document).ready(function(){
 		$('#id').val($(this).data('id'));
 		$('#name').val($(this).data('name'));
 		$('#designation').val($(this).data('designation'));
+		$('#department').val($(this).data('department'));
 		$('#email').val($(this).data('email'));
 		$('#phonenumber').val($(this).data('phonenumber'));
 	});
@@ -60,6 +61,11 @@ $(document).ready(function(){
 				$('#t_jobtype_' + id).text(designation);
 				$('#t_email_' + id).text(email);
 				$('#t_phonenumber_' + id).text(phonenumber);
+				// Update button data-attr .action-update
+				$('.action-update').data('name', name);
+				$('.action-update').data('designation', designation);
+				$('.action-update').data('email', email);
+				$('.action-update').data('phonenumber', phonenumber);
 			}
 		});
 	});
