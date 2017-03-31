@@ -41,7 +41,7 @@
         ]) !!};
     </script>
 </head>
-<body class="skin-blue layout-boxed" style="height: 100%;" >
+<body>
 
     <div class="wrapper" >
         <nav class="navbar navbar-default navbar-static-top">
