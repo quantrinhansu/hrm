@@ -70,7 +70,26 @@ $(document).ready(function(){
 		});
 	});
 	$('#datepicker').datepicker({
-    format: 'mm/dd/yyyy',
+    format: 'yyyy/mm/dd',
     todayBtn : 'linked'
-});
+	});
+	$('#datepicker1').datepicker({
+    format: 'yyyy/mm/dd',
+    todayBtn : 'linked'
+	});
+
+	// validate form add
+	$("#form_add").validate({
+		rules:{
+			first_name: "required",
+			last_name: "required",
+		},
+		message:{
+			first_name: "nhap ten",
+			last_name: "nhap ho"
+		},
+		 submitHandler: function(form) {
+		      form.submit();
+		    }
+	});
 });
