@@ -139,7 +139,7 @@
                               <h2 class="name">Employees</h2>
                               <li>
                                 <ul class="menu_ul">
-                                  <li class="li_header"><a href="employee">Employees</a></li>
+                                  <li class="li_header"><a href="employee"><i class="fa fa-user" aria-hidden="true"></i> Employees</a></li>
                                   <li class="li_header"><a href="#">CSS</a></li>
                                   <li class="li_header"><a href="#">JavaScript</a></li>
                                   <li class="li_header"><a href="#">HTML</a></li>
@@ -335,8 +335,8 @@
                                   <!-- The user image in the menu -->
                                   <li class="user-header">
                                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                    <h4> {{ Auth::user()->name  }} </h4>
-                                    <h5><i>{{ Auth::user()->job_position }} / {{ Auth::user()->team_id }}</i></h5>
+                                    <h4> {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h4>
+                                    <h5><i>{{ Auth::user()->job_position }} / {{ Auth::user()->team['name']}}</i></h5>
                                   </li>
                                   <!-- Menu Body -->
                                   <li class="user-body">

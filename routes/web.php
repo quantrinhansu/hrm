@@ -29,3 +29,4 @@ Route::post('/employee/update', 'UserController@postUpdate');
 
 Route::get('/employee/add', 'UserController@getAdd');
 Route::post('/employee/add', 'UserController@postAdd');
+
