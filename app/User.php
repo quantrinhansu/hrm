@@ -39,4 +39,7 @@ class User extends Authenticatable
         $user->delete();
     }
 
+    public function team(){
+        return $this->belongsTo('App\Team', 'team_id');
+    }
 }
