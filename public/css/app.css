@@ -1,4 +1,8 @@
-/*skill*/
+
+.btn_employee{
+    width: 15%;
+    margin-left: 15px;
+}
 #tags{
   float:left;
   border:1px solid #ccc;
