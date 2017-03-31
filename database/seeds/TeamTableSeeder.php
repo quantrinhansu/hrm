@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+require_once base_path(). '\vendor\fzaninotto\faker\src\autoload.php';
 
 class TeamTableSeeder extends Seeder
 {

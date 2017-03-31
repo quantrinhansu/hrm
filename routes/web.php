@@ -27,6 +27,8 @@ Route::post('/employee/delete', 'UserController@postDelete');
 
 Route::post('/employee/update', 'UserController@postUpdate');
 
+Route::post('/employee/setting/update', 'UserController@postSettingUpdate');
+
 Route::get('/employee/add', 'UserController@getAdd');
 Route::post('/employee/add', 'UserController@postAdd');
 

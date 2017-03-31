@@ -60,7 +60,7 @@
               <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
 
               <p class="text-muted">
-                B.S. in Computer Science from the University of Tennessee at Knoxville
+                {{ $user->education }}
               </p>
               <hr>
               <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
@@ -68,11 +68,9 @@
               <hr>
               <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
               <p>
-                <span class="label label-danger">UI Design</span>
-                <span class="label label-success">Coding</span>
-                <span class="label label-info">Javascript</span>
-                <span class="label label-warning">PHP</span>
-                <span class="label label-primary">Node.js</span>
+              <div id="aboutme">
+                
+              </div>
               </p>
               <hr>
               <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
@@ -304,74 +302,81 @@
               <!-- /.tab-pane -->
 
               <div class="tab-pane" id="settings">
-                <form class="form-horizontal">
+                <form  class="form-horizontal" method="POST">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Display Name</label>
+                    <label for="SettingInputName" class="col-sm-2 control-label">Display Name</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" value="{{ Auth::user()->name }}">
+                      <input type="hidden" id="SettingInputId" value="{{ Auth::user()->id }}">
+                      <input type="text" class="form-control" id="SettingInputName" value="{{ Auth::user()->name }}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Education</label>
+                    <label for="SettingInputEducation" class="col-sm-2 control-label">Education</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputEducation" placeholder="Enter your Education">
+                      <input type="text" class="form-control" value="{{ $user->education }}" id="SettingInputEducation" placeholder="Enter your Education">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputLocation" class="col-sm-2 control-label">Location</label>
+                    <label for="searchTextField" class="col-sm-2 control-label">Location</label>
 
                     <div class="col-sm-10">
                       <input type="text" class="form-control" id="searchTextField" value="{{ $user->present_address }}" >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Email</label>
+                    <label for="SettingInputEmail" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" required>
+                      <input type="email" class="form-control" id="SettingInputEmail" value="{{ $user->email }}" placeholder="Enter your email" required>
                     </div>
                   </div>
                   <div class="form-group">
-                  <label for="inputName" class="col-sm-2 control-label">Date of birth</label>
-                  <div class="col-sm-10">
-                  <div class="input-group date">
-                  <div class="input-group-addon">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                  <input type="text" class="form-control pull-right datepicker" value="{{ $user->date_of_birth }}" readonly>
-                  </div>
-                </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputNotes" class="col-sm-2 control-label">Notes</label>
+                    <label for="SettingInputPhonenumber" class="col-sm-2 control-label">Phone number</label>
 
                     <div class="col-sm-10">
-                        <textarea id="inputNotes" class="form-control" placeholder="Enter Notes"></textarea>
+                      <input type="text" class="form-control" id="SettingInputPhonenumber" value="{{ $user->phone_number }}" placeholder="Enter your phone number" required>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+                    <label for="SettingInputDateofbirth" class="col-sm-2 control-label">Date of birth</label>
+                    <div class="col-sm-10">
+                    <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right datepicker" id="SettingInputDateofbirth" value="{{ $user->date_of_birth }}" readonly>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="SettingInputNotes" class="col-sm-2 control-label">Notes</label>
+
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="SettingInputNotes" placeholder="Enter Notes">{{ $user->noted }}</textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="SettingInputSkill" class="col-sm-2 control-label">Skills</label>
 
                     <div class="col-sm-10">
                         <div id="tags">
-                        <input class="input form-control" type="text" value="" placeholder="Add a skill" />
+                        <input data-skill="{{ $user->skill }}" class="input form-control" id="SettingInputSkill" type="text" value="" placeholder="Add a skill" />
                       </div>
                     </div>
                   </div>
-
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" required name="terms"> I agree to the <a href="#">terms and conditions</a>
+                          <input type="checkbox" id="SettingInputRule" name="terms"> I agree to the <a href="#">terms and conditions</a>
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Update</button>
+                      <a type="submit" class="btn btn-danger button-setting-update">Update</a>
                     </div>
                   </div>
                 </form>
