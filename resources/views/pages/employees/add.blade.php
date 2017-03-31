@@ -72,7 +72,7 @@
                                   <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                   </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker" readonly name="date_of_birth">
+                                    <input type="text" class="form-control pull-right datepicker"  readonly name="date_of_birth">
                               </div>
                         </div>
                         <div class="form-group">
@@ -81,7 +81,7 @@
                                   <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                   </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker1" readonly name="joining_date">
+                                    <input type="text" class="form-control pull-right datepicker"  readonly name="joining_date">
                             </div>
                         </div>
                         

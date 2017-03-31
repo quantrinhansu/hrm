@@ -315,7 +315,7 @@
                     <label for="inputEmail" class="col-sm-2 control-label">Education</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" >
+                      <input type="text" class="form-control" id="inputEducation" placeholder="Enter your Education">
                     </div>
                   </div>
                   <div class="form-group">
@@ -329,7 +329,7 @@
                     <label for="inputName" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" >
+                      <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -339,7 +339,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="datepicker" value="{{ $user->date_of_birth }}" readonly>
+                  <input type="text" class="form-control pull-right datepicker" value="{{ $user->date_of_birth }}" readonly>
                   </div>
                 </div>
                   </div>
@@ -347,7 +347,7 @@
                     <label for="inputNotes" class="col-sm-2 control-label">Notes</label>
 
                     <div class="col-sm-10">
-                        <textarea id="inputNotes" class="form-control"></textarea>
+                        <textarea id="inputNotes" class="form-control" placeholder="Enter Notes"></textarea>
                     </div>
                   </div>
                   <div class="form-group">
@@ -364,7 +364,7 @@
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                          <input type="checkbox" required name="terms"> I agree to the <a href="#">terms and conditions</a>
                         </label>
                       </div>
                     </div>
