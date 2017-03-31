@@ -24,9 +24,9 @@ class UsersTableSeeder extends Seeder
                 'gender'            => $faker->numberBetween(1,2),
                 'first_name'        => $faker->firstNameMale,
                 'last_name'         => $faker->lastName,
-                'education'         => 'UIT'
-                'skill'             => 'php'
-                'work_history'      => $faker->company
+                'education'         => 'UIT',
+                'skill'             => 'php',
+                'work_history'      => $faker->company,
                 'permanent_address' => $faker->address,
                 'present_address'   => $faker->streetAddress,
                 'date_of_birth'     => $faker->dateTime(),
