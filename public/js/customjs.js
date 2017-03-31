@@ -1,5 +1,13 @@
 $(document).ready(function(){
+	var input = document.getElementById('searchTextField');
+	new google.maps.places.Autocomplete(input);
 
+	$(window).keydown(function(event){
+		if(event.keyCode == 13) {
+			event.preventDefault();
+			return false;
+		}
+	});
 	$(".action-delete").click(function(){
 		$('.isdelete').attr('id', $(this).data('id'));
 		$('.id-delete').html($(this).data('id'));
@@ -70,7 +78,31 @@ $(document).ready(function(){
 		});
 	});
 	$('#datepicker').datepicker({
-    format: 'mm/dd/yyyy',
-    todayBtn : 'linked'
-});
+	    format: 'mm/dd/yyyy',
+	    todayBtn : 'linked'
+	});
+
+	$('#tags input').on('focusout', function(){    
+		var txt= this.value.replace(/[^a-zA-Z0-9\+\-\.\#]/g,'');
+		var textArray = [
+		    'primary',
+		    'success',
+		    'default',
+		    'warning',
+		    'info',
+		    'danger'
+		];
+		var randomNumber = Math.floor(Math.random()*textArray.length);
+		if(txt) $(this).before('<h3 style="display: inline;"><span class="label label-'+textArray[randomNumber]+' tag">'+ txt +'</span></h3>');
+			this.value="";
+		}).on('keyup',function( e ){
+		
+		if(/(188|13)/.test(e.which)) 
+			$(this).focusout();
+		});
+
+		$('#tags').on('click','.tag',function(){
+			if( confirm("Delete this Skill?") ) 
+				$(this).remove(); 
+	});
 });

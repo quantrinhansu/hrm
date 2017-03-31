@@ -385,5 +385,6 @@
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/customjs.js') }}"></script>
     <script type="text/javascript" src="{{ asset('plugins/datepicker/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyAs6VtdZS7yKv-xbzQs7mvdtjVJcDZYguc"></script>
 </body>
 </html>
