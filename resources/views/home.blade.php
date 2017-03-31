@@ -6,13 +6,29 @@
         <div class="col-md-12">
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
+                  <li><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
                   <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
                   <li><a href="#timeline" data-toggle="tab">Leaves</a></li>
-                  <li><a href="#settings" data-toggle="tab">Settings</a></li>
-                  <li><a href="#user_info" data-toggle="tab">User info</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="active tab-pane" id="activity">
+                    {{-- Status --}}
+                        <div class="widget-area no-padding blank">
+                                <div class="status-upload">
+                                    <form>
+                                        <textarea placeholder="What are you doing right now?" ></textarea>
+                                        <ul>
+                                            <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+                                            <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+                                            <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+                                            <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+                                        </ul>
+                                        <button type="submit" class="btn btn-primary green">Post</button>
+                                    </form>
+                                </div><!-- Status Upload  -->
+                            </div><!-- Widget Area -->
+                    {{-- End Status --}}
+                    <hr>
                     <!-- Post -->
                     <div class="post">
                       <div class="user-block">
@@ -128,98 +144,34 @@
                   </div>
                   <!-- /.tab-pane -->
                   <div class="tab-pane" id="timeline">
-                    <!-- The timeline -->
-                    <ul class="timeline timeline-inverse">
-                      <!-- timeline time label -->
-                      <li class="time-label">
-                            <span class="bg-red">
-                              10 Feb. 2014
+                    <div class="post leaves">
+                      <div class="user-block">
+                        <img class="img-circle img-bordered-sm" src="images/default_login.png" alt="user image">
+                            <span class="username">
+                              <a href="#">Jonathan Burke Jr.</a>
+                              <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
                             </span>
-                      </li>
-                      <!-- /.timeline-label -->
-                      <!-- timeline item -->
-                      <li>
-                        <i class="fa fa-envelope bg-blue"></i>
+                        <span class="description">Shared publicly - 7:30 PM today</span>
+                      </div>
+                      <!-- /.user-block -->
+                      <p>
+                        Lorem ipsum represents a long-held tradition for designers,
+                        typographers and the like. Some people hate it and argue for
+                        its demise, but others ignore the hate as they create awesome
+                        tools to help create filler text for everyone from bacon lovers
+                        to Charlie Sheen fans.
+                      </p>
+                      <ul class="list-inline">
+                        <li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
+                        <li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a>
+                        </li>
+                        <li class="pull-right">
+                          <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
+                            (5)</a></li>
+                      </ul>
 
-                        <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-
-                          <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                          <div class="timeline-body">
-                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                            quora plaxo ideeli hulu weebly balihoo...
-                          </div>
-                          <div class="timeline-footer">
-                            <a class="btn btn-primary btn-xs">Read more</a>
-                            <a class="btn btn-danger btn-xs">Delete</a>
-                          </div>
-                        </div>
-                      </li>
-                      <!-- END timeline item -->
-                      <!-- timeline item -->
-                      <li>
-                        <i class="fa fa-user bg-aqua"></i>
-
-                        <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-
-                          <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request
-                          </h3>
-                        </div>
-                      </li>
-                      <!-- END timeline item -->
-                      <!-- timeline item -->
-                      <li>
-                        <i class="fa fa-comments bg-yellow"></i>
-
-                        <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
-                          <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-                          <div class="timeline-body">
-                            Take me to your leader!
-                            Switzerland is small and neutral!
-                            We are more like Germany, ambitious and misunderstood!
-                          </div>
-                          <div class="timeline-footer">
-                            <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                          </div>
-                        </div>
-                      </li>
-                      <!-- END timeline item -->
-                      <!-- timeline time label -->
-                      <li class="time-label">
-                            <span class="bg-green">
-                              3 Jan. 2014
-                            </span>
-                      </li>
-                      <!-- /.timeline-label -->
-                      <!-- timeline item -->
-                      <li>
-                        <i class="fa fa-camera bg-purple"></i>
-
-                        <div class="timeline-item">
-                          <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-
-                          <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                          <div class="timeline-body">
-                            <img src="/images/-text.png" alt="..." class="margin">
-                            <img src="/images/-text.png" alt="..." class="margin">
-                            <img src="/images/-text.png" alt="..." class="margin">
-                            <img src="/images/-text.png" alt="..." class="margin">
-                          </div>
-                        </div>
-                      </li>
-                      <!-- END timeline item -->
-                      <li>
-                        <i class="fa fa-clock-o bg-gray"></i>
-                      </li>
-                    </ul>
+                      <input class="form-control input-sm" type="text" placeholder="Type a comment">
+                    </div>
                   </div>
                   <!-- /.tab-pane -->
                 </div>

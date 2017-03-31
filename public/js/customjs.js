@@ -29,6 +29,7 @@ $(document).ready(function(){
 			return false;
 		}
 	});
+
 	$(".action-delete").click(function(){
 		$('.isdelete').attr('id', $(this).data('id'));
 		$('.id-delete').html($(this).data('id'));
