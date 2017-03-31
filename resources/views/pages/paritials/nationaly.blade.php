@@ -1,4 +1,4 @@
-<select name="nationality">
+<select name="nationality" class="form-control">
   <option value="">-- select one --</option>
   <option value="afghan">Afghan</option>
   <option value="albanian">Albanian</option>

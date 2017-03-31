@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <a href="#" class="btn btn-primary btn_add">Add new</a>
+                    <a href="employee/add" class="btn btn-primary btn_add">Add new</a>
                 </div>
             </div>
             <table class="table table-striped table-bordered table-hover" id="employee-table">
