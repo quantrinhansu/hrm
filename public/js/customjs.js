@@ -77,13 +77,9 @@ $(document).ready(function(){
 			}
 		});
 	});
-	$('#datepicker').datepicker({
-    format: 'yyyy/mm/dd',
-    todayBtn : 'linked'
-	});
-	$('#datepicker1').datepicker({
-    format: 'yyyy/mm/dd',
-    todayBtn : 'linked'
+	$('.datepicker').datepicker({
+		    format: 'yyyy/mm/dd',
+		    todayBtn : 'linked'
 	});
 
 	// validate form add
@@ -99,8 +95,6 @@ $(document).ready(function(){
 		 submitHandler: function(form) {
 		      form.submit();
 		    }
-	    format: 'mm/dd/yyyy',
-	    todayBtn : 'linked'
 	});
 
 	$('#tags input').on('focusout', function(){    
