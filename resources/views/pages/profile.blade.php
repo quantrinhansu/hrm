@@ -308,7 +308,7 @@
                   <div class="form-group">
                     <label for="inputName" class="col-sm-2 control-label">Display Name</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" value="{{ Auth::user()->name }}">
+                      <input type="text" class="form-control" id="inputName" value="{{ Auth::user()->name }}">
                     </div>
                   </div>
                   <div class="form-group">
@@ -319,10 +319,10 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label">Location</label>
+                    <label for="inputLocation" class="col-sm-2 control-label">Location</label>
 
                     <div class="col-sm-10">
-                      <input class="form-control" id="inputExperience" value="{{ $user->present_address }}" >
+                      <input type="text" class="form-control" id="searchTextField" value="{{ $user->present_address }}" >
                     </div>
                   </div>
                   <div class="form-group">
@@ -339,17 +339,27 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="datepicker" readonly>
+                  <input type="text" class="form-control pull-right" id="datepicker" value="{{ $user->date_of_birth }}" readonly>
                   </div>
                 </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputNotes" class="col-sm-2 control-label">Notes</label>
+
+                    <div class="col-sm-10">
+                        <textarea id="inputNotes" class="form-control"></textarea>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" >
+                        <div id="tags">
+                        <input class="input form-control" type="text" value="" placeholder="Add a skill" />
+                      </div>
                     </div>
                   </div>
+
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
@@ -361,7 +371,7 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
+                      <button type="submit" class="btn btn-danger">Update</button>
                     </div>
                   </div>
                 </form>
