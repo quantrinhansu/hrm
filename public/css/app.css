@@ -123,6 +123,7 @@ body{
         -moz-animation-delay:0.6385s;
 }
 
+<<<<<<< HEAD
 #frotateG_08{
     left:4px;
     bottom:4px;
@@ -184,7 +185,11 @@ body{
         background-color:rgb(219,199,100);
     }
 }
-/**/
+/*contract*/
+#contract-table{
+    overflow: scroll;
+    display: block;
+}
 div .tab-content{
     margin-left: 10px;
     margin-right: 10px;

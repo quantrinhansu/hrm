@@ -43,7 +43,7 @@ class UserController extends Controller
     public function getList()
     {
         $employee = User::all();
-        $employee = User::paginate(20);
+        $employee = User::paginate(10);
         return view('pages.employees.employee', ['employee' => $employee]);
     }
     /**
@@ -150,8 +150,8 @@ class UserController extends Controller
         $user->active            = 1;
         $user->gender            = $request->gender;
         $user->avatar            = "";
-        $user->first_name        = $request->first_name;
-        $user->last_name         = $request->last_name;
+        $user->first_name        = $request->first_name1;
+        $user->last_name         = $request->last_name1;
         $user->permanent_address = $request->permanent_address;
         $user->present_address   = $request->present_address;
         $user->date_of_birth     = $request->date_of_birth;
