@@ -116,6 +116,7 @@ $(document).ready(function(){
 
 	//Setting Update
 	$('.button-setting-update').click(function(){
+	
 		var name      	  = $('#SettingInputName').val(),
 			id            = $('#SettingInputId').val(),
 			education     = $('#SettingInputEducation').val(),
@@ -140,37 +141,43 @@ $(document).ready(function(){
 		    }
 		});
 		if ($('#SettingInputRule').prop('checked')) {
-		$.ajax({
-			type: 'POST',
-			url: 'employee/setting/update',
-			dataType: 'json',
-			data: {
-				id : id,
-				name : name,
-				education : education,
-				email : email,
-				location : location,
-				date_of_birth : date_of_birth,
-				notes : notes,
-				skill : skill,
-				phonenumber : phonenumber
-			},
-			success:function(data){
-				temp_skill_arr = skill.split(',');
-				$('#aboutme').empty();
-				temp_skill_arr.forEach(function(item){
-					var randomNumber = Math.floor(Math.random()*textArray.length);
+			$('#floatingCirclesG').fadeIn();
+			$.ajax({
+				type: 'POST',
+				url: 'employee/setting/update',
+				dataType: 'json',
+				data: {
+					id : id,
+					name : name,
+					education : education,
+					email : email,
+					location : location,
+					date_of_birth : date_of_birth,
+					notes : notes,
+					skill : skill,
+					phonenumber : phonenumber
+				},
 
-					$('#aboutme').append('<h3 style="font-size: 15px; display: inline-block;padding: 2px" class="h3"><span class="label label-'+textArray[randomNumber]+' tag">'+ item +'</span></h3>');
-				});
-			}
-		});
+				success:function(data){
+					$('#floatingCirclesG').fadeOut();
+					$('#successAlert').fadeIn('slow');
+					$('#successAlert').delay(5000).fadeOut(400);
+
+					temp_skill_arr = skill.split(',');
+					$('#aboutme').empty();
+					temp_skill_arr.forEach(function(item){
+						var randomNumber = Math.floor(Math.random()*textArray.length);
+
+						$('#aboutme').append('<h3 style="font-size: 15px; display: inline-block;padding: 2px" class="h3"><span class="label label-'+textArray[randomNumber]+' tag">'+ item +'</span></h3>');
+					});
+				}
+			});
 	}else{
 		alert('Please check \"I agree to the terms and conditions\"');
 	}
 	});
 	$('.datepicker').datepicker({
-		    format: 'dd-mm-yyyy',
+		    format: 'yyyy-mm-dd',
 		    todayBtn : 'linked'
 	});
 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -121,7 +122,9 @@
                   <input class="form-control input-sm" type="text" placeholder="Type a comment">
                 </div>
                 <!-- /.post -->
-
+                <?php 
+                  view_post_activity('','','','Anh Duc','cong khai','30 phut truoc','xin nghi a nha','699');
+                ?>
                 <!-- Post -->
                 <div class="post clearfix">
                   <div class="user-block">
@@ -374,10 +377,26 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <a type="submit" class="btn btn-danger button-setting-update">Update</a>
+                  <div class="form-group update">
+                    <div class="col-sm-offset-2 col-sm-1">
+                      <a type="submit" class="btn btn-danger button-setting-update">Update<div class="col-sm-1" id="floatingCirclesG" style="display: none;">
+                      <div class="f_circleG" id="frotateG_01"></div>
+                      <div class="f_circleG" id="frotateG_02"></div>
+                      <div class="f_circleG" id="frotateG_03"></div>
+                      <div class="f_circleG" id="frotateG_04"></div>
+                      <div class="f_circleG" id="frotateG_05"></div>
+                      <div class="f_circleG" id="frotateG_06"></div>
+                      <div class="f_circleG" id="frotateG_07"></div>
+                      <div class="f_circleG" id="frotateG_08"></div>
+                    </div></a>
                     </div>
+                   <div class="col-sm-5" id="successAlert" style="display: none">  
+                    <div class="alert alert-success alert-dismissable" style="background-color: #dff0d8!important;border-color: #d6e9c6;color: #3c763d!important;padding-bottom: 6px;padding-top: 6px;margin-bottom: 0px;">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close" style="text-decoration: none;">&times;</a>
+                      <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                    </div>
+                   </div>
+                   
                   </div>
                 </form>
               </div>
