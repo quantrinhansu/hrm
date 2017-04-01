@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder
                 'job_position'      => $faker->jobTitle,
                 'department_id'     => $faker->numberBetween(1,10),
                 'team_id'           => $faker->numberBetween(1,10),
-                'job_type'          => $faker->numberBetween(1,10),
+                'job_type_id'          => $faker->numberBetween(1,3),
                 'noted'             => $faker->word,
                 'leave_per_month'   => $faker->numberBetween(1,10),
                 'leave_per_year'    => $faker->numberBetween(1,10),

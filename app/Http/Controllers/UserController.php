@@ -8,6 +8,8 @@ use App\User;
 use App\Department;
 use Auth;
 use App\Employee_relatives;
+use App\JobType;
+use App\Team;
 
 class UserController extends Controller
 {
@@ -119,16 +121,26 @@ class UserController extends Controller
     public function getAdd()
     {
         $department = Department::all();
-        return view('pages.employees.add', ['department' => $department]);
+        $job_type = JobType::all();
+        $team = Team::all();
+        return view('pages.employees.add', ['department' => $department, 'job_type' => $job_type, 'team' => $team]);
     }
 
     public function postAdd(Request $request)
     {
         $this->validate($request, [
+                'name'                  =>  'required',
+                'email'                 =>  'required|email',
                 'password'              => 'required',
-                'password_confirm'      => 'same:password'
+                'password_confirm'      => 'same:password',
+                'role'                  => 'required'
                 ],[
-                'password_confirm.same' => 'Password is wrong'
+                'name.required'         => 'Name is required',
+                'email.required'        => 'Email is required',
+                'email.email'           =>  'The email must be a valid email address',
+                'password.required'     => 'Password is required',
+                'password_confirm.same' => 'Password is wrong',
+                'role.required'         => 'Role is required',        
                 ]);
         $user = new User;
         $user->name              = $request->name;
@@ -154,7 +166,7 @@ class UserController extends Controller
         $user->job_position      = $request->job_position;
         $user->department_id     = $request->department;
         $user->team_id           = $request->team;
-        $user->job_type          = $request->job_type;
+        $user->job_type_id       = $request->job_type;
         $user->noted             = $request->noted;
         $user->leave_per_month   = 0;
         $user->leave_per_year    = 0;

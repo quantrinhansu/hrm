@@ -29,9 +29,9 @@
             <table class="table table-striped table-bordered table-hover" id="employee-table">
                 <thead>
                     <tr align="center">
-                        <th>ID</th>
+                        <th>STT</th>
                         <th>Name</th>
-                        <th>Designation</th>
+                        <th>Job Type</th>
                         <th>Department</th>
                         <th>Email</th>   
                         <th>Phone Number</th>

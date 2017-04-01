@@ -18,34 +18,35 @@
                         {{session('notification')}}
                     </div>
                 @endif
+
+              @if ( $errors->any() )
+                    <div class="alert alert-danger">
+                        @foreach($errors->all() as $err)
+                            {{$err}}<br>
+                        @endforeach
+                    </div>
+                @endif
             </div>
              <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <!-- /.col-lg-12 -->
                 <div class="col-lg-7">
                     	<div class="form-group">
                         <label>First name</label>
-                        <input class="form-control" name="first_name" placeholder="Please Enter First Name" required />
+                        <input class="form-control" name="first_name" placeholder="Please Enter First Name"/>
     	                </div>
     	             	<div class="form-group">
     	                    <label>Last Name</label>
-    	                    <input class="form-control" name="last_name" placeholder="Please Enter Last Name" required/>
+    	                    <input class="form-control" name="last_name" placeholder="Please Enter Last Name"/>
     	                </div>
                         <div class="form-group">
-                            <label>Name</label>
-                            <input class="form-control" name="name" placeholder="Please Enter Name" />
+                            <label>User Name</label>
+                            <input class="form-control" name="name" placeholder="Please Enter User Name" />
                         </div>
                         
                         <div class="form-group">
                             <label>Email</label>
                             <input class="form-control" name="email" placeholder="Please Enter Email" />
                         </div>
-                        @if ( $errors->any() )
-                            <div class="alert alert-danger">
-                                @foreach($errors->all() as $err)
-                                    {{$err}}<br>
-                                @endforeach
-                            </div>
-                        @endif
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" class="form-control" name="password" placeholder="Please Enter Password" />
@@ -129,11 +130,21 @@
                     </div>
                     <div class="form-group">
                         <label>Team</label>
-                        <input class="form-control" name="team" placeholder="Please Enter Team" />
+                        <select class="form-control" name="team">
+                            <option value="0">Please Choose Team</option>
+                            @foreach($team as $value)
+                                <option value="{{$value->id}}">{{$value->name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Job Type</label>
-                        <input class="form-control" name="job_type" placeholder="Please Enter Tax Code" />
+                        <select class="form-control" name="job_type">
+                            <option value="0">Please Choose Job Type</option>
+                            @foreach($job_type as $value)
+                                <option value="{{$value->id}}">{{$value->name}}</option>
+                            @endforeach
+                        </select>
                     </div>
                      <div class="form-group">
                         <label>Gender</label>

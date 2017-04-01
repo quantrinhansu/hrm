@@ -41,7 +41,7 @@ class CreateUsersTable extends Migration
             $table->string('job_position')->nullable();
             $table->integer('department_id')->references('id')->on('departments')->nullable();
             $table->string('team_id')->references('id')->on('team')->nullable();
-            $table->string('job_type')->nullable();
+            $table->string('job_type_id')->references('id')->on('job_type');
             $table->string('noted')->nullable();
             $table->string('leave_per_month')->default('1'); 
             $table->string('leave_per_year')->default('1');  
