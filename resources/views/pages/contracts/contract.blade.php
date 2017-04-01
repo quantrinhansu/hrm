@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row main-row">
             <div class="col-lg-12">
-                <h1 class="page-header">Employee</h1>
+                <h1 class="page-header">Contracts</h1>
             </div>
             <!-- /.col-lg-12 -->
             <div class="row search-row">
@@ -23,40 +23,44 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <a href="employee/add" class="btn btn-primary btn_add">Add new</a>
+                    <a href="employee/contract/add" class="btn btn-primary btn_add">Add new</a>
                 </div>
             </div>
-            <table class="table table-striped table-bordered table-hover" id="employee-table">
+            <table class="table table-striped table-bordered table-hover" id="contract-table">
                 <thead>
                     <tr align="center">
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Job Type</th>
+                        <th>Employee Name</th>
+                        <th>Contract Type</th>
+                        <th>Contract Title</th>
+                        <th>Contract Start Date</th>
+                        <th>Contract End Date</th>      
+                        <th>Contract Description</th>
+                        <th>Salary</th>
+                        <th>Employee Designation</th>
+                        <th>Employee Type</th>
+                        <th>Employee Category</th>
                         <th>Department</th>
-                        <th>Email</th>   
-                        <th>Phone Number</th>
-                        <th>Direct Message</th>
-                        <th colspan="3">Action</th>
+                        <th colspan="2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php $i=0; ?>
-                @foreach($employee as $value)
-                    <tr class="odd gradeX" align="center" id="tr{{ $value->id }}">
-                        <td>#{{$value->id}}</td>
-                        <td id="t_name_{{ $value->id }}" >{{$value->name}}</td>
-                        <td id="t_jobtype_{{ $value->id }}" >{{$value->job_type}}</td>
-                        <td>{{$value->departments['name']}}</td>
-                        <td id="t_email_{{ $value->id }}">{{$value->email}}</td>
-                        <td id="t_phonenumber_{{ $value->id }}">{{$value->phone_number}}</td>
-                        <td><a class="btn btn-info btn-xs" href=""><i class="fa fa-comments" aria-hidden="true"></i> Message</a></td>
-                        <td><a class="btn btn-primary btn-xs" href="profile/{{$value->id}}"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></td>
-                        <td class="center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-warning btn-xs action-update" data-id="{{ $value->id }}" data-name="{{$value->name}}" data-designation="{{$value->job_type}}" data-department="{{$value->departments['name']}}" data-email="{{$value->email}}" data-phonenumber="{{$value->phone_number}}" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span> Edit</button></p></td>
-                        <td class="center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button data-id="{{ $value->id }}" class="btn btn-danger btn-xs action-delete" data-title="Delete" data-toggle="modal" data-target="#edit-modal" ><span class="glyphicon glyphicon-trash"></span> Delete</button></p></td>
-             
-                    </tr>
-                    <?php $i++; ?>
-                @endforeach
+               		<tr>
+               			<td>1</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+               			<td>Binh</td>
+                        <td class="center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-warning btn-xs action-update"><span class="glyphicon glyphicon-pencil"></span> Edit</button></p></td>
+                        <td class="center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs action-delete"><span class="glyphicon glyphicon-trash"></span> Delete</button></p></td>
+               		</tr>
                 </tbody>
             </table>
 
@@ -129,28 +133,6 @@
     </div>
 {{-- end modal confirm --}}
 </div>
-<!-- /#page-wrapper -->
-<div class="paginate" align="center">
-		{!!$employee->render()!!}
-</div>
+
 @endsection
 
-<script type="text/javascript">
-    function myFunction() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("searchInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("employee-table");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>

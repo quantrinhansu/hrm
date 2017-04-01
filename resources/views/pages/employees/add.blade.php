@@ -31,16 +31,16 @@
                 <!-- /.col-lg-12 -->
                 <div class="col-lg-7">
                     	<div class="form-group">
-                        <label>First name</label>
-                        <input class="form-control" name="first_name" placeholder="Please Enter First Name"/>
+                            <label>First name</label>
+                             <input class="form-control" name="first_name1" placeholder="Please Enter First Name"  />
     	                </div>
     	             	<div class="form-group">
     	                    <label>Last Name</label>
-    	                    <input class="form-control" name="last_name" placeholder="Please Enter Last Name"/>
+    	                    <input class="form-control" name="last_name1" placeholder="Please Enter Last Name"/>
     	                </div>
                         <div class="form-group">
                             <label>User Name</label>
-                            <input class="form-control" name="name" placeholder="Please Enter User Name" />
+                            <input class="form-control" name="name" placeholder="Please Enter User Name"  />
                         </div>
                         
                         <div class="form-group">
@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label>Role</label>
-                            <input class="form-control" name="role" placeholder="Please Enter Role" />
+                            <input type="number" class="form-control" name="role" placeholder="Please Enter Role" />
                         </div>
                         <div class="form-group">
                             <label>Permanent address</label>
@@ -90,6 +90,30 @@
                             <label>Job position</label>
                             <input class="form-control" name="job_position" placeholder="Please Enter Job position" />
                         </div>
+
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <label class="radio-inline">
+                                <input name="gender" value="1" type="radio" checked="">Male
+                            </label>
+                            <label class="radio-inline">
+                                <input name="gender" value="0" type="radio">Female
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>Maritial Status</label>
+                            <label class="radio-inline">
+                                <input name="maritial_status" value="1" checked="" type="radio">Married
+                            </label>
+                            <label class="radio-inline">
+                                <input name="maritial_status" value="2" type="radio">Single
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>Nationality</label>
+                            <label>@include('pages/paritials/nationaly')</label>
+                        </div>
+
                         <div class="form-group">
                             <label>Noted</label>
                             <textarea class="form-control" rows="3" name="noted"></textarea>
@@ -101,7 +125,7 @@
                 <div class="col-lg-5">
                 	<div class="form-group">
                         <label>Phone Number</label>
-                        <input class="form-control" name="phone_number" placeholder="Please Enter Phone Number" />
+                        <input type="number" class="form-control" name="phone_number" placeholder="Please Enter Phone Number" />
                     </div>
                     <div class="form-group">
                         <label>Bank Account Name</label>
@@ -146,28 +170,7 @@
                             @endforeach
                         </select>
                     </div>
-                     <div class="form-group">
-                        <label>Gender</label>
-                        <label class="radio-inline">
-                            <input name="gender" value="1" type="radio" checked="">Male
-                        </label>
-                        <label class="radio-inline">
-                            <input name="gender" value="0" type="radio">Female
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Maritial Status</label>
-                        <label class="radio-inline">
-                            <input name="maritial_status" value="1" checked="" type="radio">Married
-                        </label>
-                        <label class="radio-inline">
-                            <input name="maritial_status" value="2" type="radio">Single
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label>Nationality</label>
-                        <label>@include('pages/paritials/nationaly')</label>
-                    </div>
+                     
                 </div>
             </form>
         </div>

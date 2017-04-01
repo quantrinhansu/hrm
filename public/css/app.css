@@ -5,6 +5,10 @@ body{
   background-color: #ecf0f5!important;
 }
 
+#contract-table{
+    overflow: scroll;
+    display: block;
+}
 div .tab-content{
     margin-left: 10px;
     margin-right: 10px;
