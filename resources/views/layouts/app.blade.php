@@ -29,13 +29,10 @@
   <link rel="stylesheet" href="plugins/morris/morris.css">
   <!-- jvectormap -->
   <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
-  <!-- Date Picker -->
-  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  
     @yield('customjs')
     <!-- Scripts -->
     <script>
@@ -44,7 +41,7 @@
         ]) !!};
     </script>
 </head>
-<body class="skin-blue layout-boxed" style="height: 100%;" >
+<body>
 
     <div class="wrapper" >
         <nav class="navbar navbar-default navbar-static-top">
@@ -142,8 +139,8 @@
                               <h2 class="name">Employees</h2>
                               <li>
                                 <ul class="menu_ul">
-                                  <li class="li_header"><a href="employee">Employees</a></li>
-                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="employee"><i class="fa fa-user" aria-hidden="true"></i> Employees</a></li>
+                                  <li class="li_header"><a href="employee/contract">Contracts</a></li>
                                   <li class="li_header"><a href="#">JavaScript</a></li>
                                   <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
@@ -338,8 +335,8 @@
                                   <!-- The user image in the menu -->
                                   <li class="user-header">
                                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                    <h4> {{ Auth::user()->name  }} </h4>
-                                    <h5><i>{{ Auth::user()->job_position }} / {{ Auth::user()->team_id }}</i></h5>
+                                    <h4> {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h4>
+                                    <h5><i>{{ Auth::user()->job_position }} / {{ Auth::user()->team['name']}}</i></h5>
                                   </li>
                                   <!-- Menu Body -->
                                   <li class="user-body">
@@ -387,5 +384,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/customjs.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/datepicker/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.validate.min.js') }}"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&key=AIzaSyAs6VtdZS7yKv-xbzQs7mvdtjVJcDZYguc"></script>
 </body>
 </html>

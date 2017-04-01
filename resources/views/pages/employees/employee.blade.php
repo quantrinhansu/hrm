@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <a href="#" class="btn btn-primary btn_add">Add new</a>
+                    <a href="employee/add" class="btn btn-primary btn_add">Add new</a>
                 </div>
             </div>
             <table class="table table-striped table-bordered table-hover" id="employee-table">
@@ -31,7 +31,7 @@
                     <tr align="center">
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Designation</th>
+                        <th>Job Type</th>
                         <th>Department</th>
                         <th>Email</th>   
                         <th>Phone Number</th>
@@ -43,7 +43,7 @@
                 <?php $i=0; ?>
                 @foreach($employee as $value)
                     <tr class="odd gradeX" align="center" id="tr{{ $value->id }}">
-                        <td>#<?php echo $i; ?></td>
+                        <td>#{{$value->id}}</td>
                         <td id="t_name_{{ $value->id }}" >{{$value->name}}</td>
                         <td id="t_jobtype_{{ $value->id }}" >{{$value->job_type}}</td>
                         <td>{{$value->departments['name']}}</td>
@@ -131,7 +131,7 @@
 </div>
 <!-- /#page-wrapper -->
 <div class="paginate" align="center">
-			 {!!$employee->render()!!}
+		{!!$employee->render()!!}
 </div>
 @endsection
 

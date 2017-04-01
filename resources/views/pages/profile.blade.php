@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -60,7 +61,7 @@
               <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
 
               <p class="text-muted">
-                B.S. in Computer Science from the University of Tennessee at Knoxville
+                {{ $user->education }}
               </p>
               <hr>
               <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
@@ -68,11 +69,9 @@
               <hr>
               <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
               <p>
-                <span class="label label-danger">UI Design</span>
-                <span class="label label-success">Coding</span>
-                <span class="label label-info">Javascript</span>
-                <span class="label label-warning">PHP</span>
-                <span class="label label-primary">Node.js</span>
+              <div id="aboutme">
+                
+              </div>
               </p>
               <hr>
               <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
@@ -123,7 +122,9 @@
                   <input class="form-control input-sm" type="text" placeholder="Type a comment">
                 </div>
                 <!-- /.post -->
-
+                <?php 
+                  view_post_activity('','','','Anh Duc','cong khai','30 phut truoc','xin nghi a nha','699');
+                ?>
                 <!-- Post -->
                 <div class="post clearfix">
                   <div class="user-block">
@@ -288,10 +289,10 @@
                       <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
 
                       <div class="timeline-body">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
+                        <img src="/images/-text.png" alt="..." class="margin">
                       </div>
                     </div>
                   </li>
@@ -304,55 +305,98 @@
               <!-- /.tab-pane -->
 
               <div class="tab-pane" id="settings">
-                <form class="form-horizontal">
+                <form  class="form-horizontal" method="POST">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Display Name</label>
+                    <label for="SettingInputName" class="col-sm-2 control-label">Display Name</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" value="{{ Auth::user()->name }}">
+                      <input type="hidden" id="SettingInputId" value="{{ Auth::user()->id }}">
+                      <input type="text" class="form-control" id="SettingInputName" value="{{ Auth::user()->name }}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Education</label>
+                    <label for="SettingInputEducation" class="col-sm-2 control-label">Education</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" >
+                      <input type="text" class="form-control" value="{{ $user->education }}" id="SettingInputEducation" placeholder="Enter your Education">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputExperience" class="col-sm-2 control-label">Location</label>
+                    <label for="searchTextField" class="col-sm-2 control-label">Location</label>
 
                     <div class="col-sm-10">
-                      <input class="form-control" id="inputExperience" value="{{ $user->present_address }}" >
+                      <input type="text" class="form-control" id="searchTextField" value="{{ $user->present_address }}" >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Email</label>
+                    <label for="SettingInputEmail" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" >
+                      <input type="email" class="form-control" id="SettingInputEmail" value="{{ $user->email }}" placeholder="Enter your email" required>
                     </div>
                   </div>
-                  
                   <div class="form-group">
-                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+                    <label for="SettingInputPhonenumber" class="col-sm-2 control-label">Phone number</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" >
+                      <input type="text" class="form-control" id="SettingInputPhonenumber" value="{{ $user->phone_number }}" placeholder="Enter your phone number" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="SettingInputDateofbirth" class="col-sm-2 control-label">Date of birth</label>
+                    <div class="col-sm-10">
+                    <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right datepicker" id="SettingInputDateofbirth" value="{{ $user->date_of_birth }}" readonly>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="SettingInputNotes" class="col-sm-2 control-label">Notes</label>
+
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="SettingInputNotes" placeholder="Enter Notes">{{ $user->noted }}</textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="SettingInputSkill" class="col-sm-2 control-label">Skills</label>
+
+                    <div class="col-sm-10">
+                        <div id="tags">
+                        <input data-skill="{{ $user->skill }}" class="input form-control" id="SettingInputSkill" type="text" value="" placeholder="Add a skill" />
+                      </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                          <input type="checkbox" id="SettingInputRule" name="terms"> I agree to the <a href="#">terms and conditions</a>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
+                  <div class="form-group update">
+                    <div class="col-sm-offset-2 col-sm-1">
+                      <a type="submit" class="btn btn-danger button-setting-update">Update<div class="col-sm-1" id="floatingCirclesG" style="display: none;">
+                      <div class="f_circleG" id="frotateG_01"></div>
+                      <div class="f_circleG" id="frotateG_02"></div>
+                      <div class="f_circleG" id="frotateG_03"></div>
+                      <div class="f_circleG" id="frotateG_04"></div>
+                      <div class="f_circleG" id="frotateG_05"></div>
+                      <div class="f_circleG" id="frotateG_06"></div>
+                      <div class="f_circleG" id="frotateG_07"></div>
+                      <div class="f_circleG" id="frotateG_08"></div>
+                    </div></a>
                     </div>
+                   <div class="col-sm-5" id="successAlert" style="display: none">  
+                    <div class="alert alert-success alert-dismissable" style="background-color: #dff0d8!important;border-color: #d6e9c6;color: #3c763d!important;padding-bottom: 6px;padding-top: 6px;margin-bottom: 0px;">
+                      <a href="#" class="close" data-dismiss="alert" aria-label="close" style="text-decoration: none;">&times;</a>
+                      <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                    </div>
+                   </div>
+                   
                   </div>
                 </form>
               </div>

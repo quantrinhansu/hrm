@@ -27,4 +27,10 @@ Route::post('/employee/delete', 'UserController@postDelete');
 
 Route::post('/employee/update', 'UserController@postUpdate');
 
+Route::post('/employee/setting/update', 'UserController@postSettingUpdate');
+
 Route::get('/employee/add', 'UserController@getAdd');
+Route::post('/employee/add', 'UserController@postAdd');
+
+Route::get('employee/contract', 'ContractController@getList');
+Route::get('employee/contract/add', 'ContractController@getAdd');
