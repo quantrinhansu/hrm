@@ -142,7 +142,7 @@ $(document).ready(function(){
 		if ($('#SettingInputRule').prop('checked')) {
 		$.ajax({
 			type: 'POST',
-			url: '/employee/setting/update',
+			url: 'employee/setting/update',
 			dataType: 'json',
 			data: {
 				id : id,
@@ -156,7 +156,13 @@ $(document).ready(function(){
 				phonenumber : phonenumber
 			},
 			success:function(data){
-				alert(data);
+				temp_skill_arr = skill.split(',');
+				$('#aboutme').empty();
+				temp_skill_arr.forEach(function(item){
+					var randomNumber = Math.floor(Math.random()*textArray.length);
+
+					$('#aboutme').append('<h3 style="font-size: 15px; display: inline-block;padding: 2px" class="h3"><span class="label label-'+textArray[randomNumber]+' tag">'+ item +'</span></h3>');
+				});
 			}
 		});
 	}else{
@@ -217,9 +223,12 @@ $(document).ready(function(){
 
 		$('#tags').on('click','.tag',function(){
 			if( confirm("Delete this Skill?") ) 
-				var del_arr = $('#SettingInputSkill').attr('data-skill');
-				var temp = del_arr.split(',');
-				console.log($(this).attr('data-skill'));
+				var del_arr,
+					temp = [];
+				if ($('#SettingInputSkill').attr('data-skill')) {
+					del_arr = $('#SettingInputSkill').attr('data-skill');
+					temp = del_arr.split(',');
+				}
 				temp[$(this).attr('data-skill')] = '';
 				$('#SettingInputSkill').attr('data-skill', temp);
 				$(this).parent('.h3').remove(); 
