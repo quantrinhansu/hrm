@@ -3,8 +3,14 @@ $(document).ready(function(){
 	new google.maps.places.Autocomplete(input);
 
 	// Skill preload
-	var InputSkill = $('#SettingInputSkill').attr('data-skill'),
+	var InputSkill,
+		tempSkill = [];
+	if ($('#SettingInputSkill').attr('data-skill')) {
+		InputSkill = $('#SettingInputSkill').attr('data-skill'),
 		tempSkill = InputSkill.split(',');
+	}
+	
+
 	var textArray = [
 		    'primary',
 		    'success',
@@ -13,14 +19,22 @@ $(document).ready(function(){
 		    'info',
 		    'danger'
 		];
-		
-		tempSkill.forEach(function(item) {
+		var i = 0,
+			InputSkillArr = [];
+		if (tempSkill.length > 0) {
+			tempSkill.forEach(function(item) {
 			var randomNumber = Math.floor(Math.random()*textArray.length);
 		    if (item.trim()) {
-		    	$('#tags input').before('<h3 style="display: inline;"><span class="label label-'+textArray[randomNumber]+' tag">'+ item +'</span></h3>');
-		    	$('#aboutme').append('<h3 style="font-size: 15px; display: inline-block;padding: 2px"><span class="label label-'+textArray[randomNumber]+' tag">'+ item +'</span></h3>');
+		    	$('#tags input').before('<h3 style="display: inline;" class="h3" ><span data-skill='+i+' class="label label-'+textArray[randomNumber]+' tag">'+ item +'</span></h3>');
+		    	$('#aboutme').append('<h3 style="font-size: 15px; display: inline-block;padding: 2px" class="h3"><span class="label label-'+textArray[randomNumber]+' tag">'+ item +'</span></h3>');
+		    	InputSkillArr.push(item);
 		    }
+				i++;
 		});
+		}
+		
+		$('#tags').attr('data-skill',i);
+		$('#SettingInputSkill').attr('data-skill',InputSkillArr);
 	// Skill end preload
 
 	$(window).keydown(function(event){
@@ -112,6 +126,14 @@ $(document).ready(function(){
 			skill         = $('#SettingInputSkill').attr('data-skill'),
 			phonenumber   = $('#SettingInputPhonenumber').val();
 
+			out_skill = [];
+			temp_skill = skill.split(',');
+			temp_skill.forEach(function(item) {
+				if (item) {
+					out_skill.push(item);
+				}
+		    }); 
+		    skill = out_skill.toString();
 		$.ajaxSetup({
 		    headers: {
 		        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -173,11 +195,16 @@ $(document).ready(function(){
 		];
 		var randomNumber = Math.floor(Math.random()*textArray.length);
 		if(txt){
-			$(this).before('<h3 style="display: inline;"><span class="label label-'+textArray[randomNumber]+' tag">'+ txt +'</span></h3>');
+			$(this).before('<h3 style="display: inline;" class="h3"><span data-skill="'+parseInt($('#tags').attr('data-skill'))+'" class="label label-'+textArray[randomNumber]+' tag">'+ txt +'</span></h3>');
 			this.value="";
-			var str_skill = $(this).attr('data-skill');
-			var temp = str_skill.split(' ');
+			var str_skill,
+				temp = [];
+			if ($(this).attr('data-skill')) {
+				str_skill = $(this).attr('data-skill');
+				temp = str_skill.split(' ');
+			}
 			temp.push(txt);
+			$('#tags').attr('data-skill',parseInt($('#tags').attr('data-skill')) + 1);
 			$(this).attr('data-skill', temp);
 		}
 
@@ -190,6 +217,11 @@ $(document).ready(function(){
 
 		$('#tags').on('click','.tag',function(){
 			if( confirm("Delete this Skill?") ) 
-				$(this).remove(); 
+				var del_arr = $('#SettingInputSkill').attr('data-skill');
+				var temp = del_arr.split(',');
+				console.log($(this).attr('data-skill'));
+				temp[$(this).attr('data-skill')] = '';
+				$('#SettingInputSkill').attr('data-skill', temp);
+				$(this).parent('.h3').remove(); 
 	});
 });
