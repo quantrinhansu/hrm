@@ -140,7 +140,7 @@
                               <li>
                                 <ul class="menu_ul">
                                   <li class="li_header"><a href="employee"><i class="fa fa-user" aria-hidden="true"></i> Employees</a></li>
-                                  <li class="li_header"><a href="#">CSS</a></li>
+                                  <li class="li_header"><a href="employee/contract">Contracts</a></li>
                                   <li class="li_header"><a href="#">JavaScript</a></li>
                                   <li class="li_header"><a href="#">HTML</a></li>
                                 </ul>
