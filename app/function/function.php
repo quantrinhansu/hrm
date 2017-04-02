@@ -95,3 +95,31 @@ function view_post_activity_images($format, $user_image_url, $user_profile_url, 
                   <input class="form-control input-sm" type="text" placeholder="Type a comment">
                 </div>';
 }
+
+//Xuất ra list danh sách: $arr_title: tên các cột, $arr_data: dữ liệu trong cột, $arr_attr: truyền attribute vào button edit và delete
+function view_list_table($arr_title, $arr_data, $arr_attr=[]){
+    $format =  '<table class="table table-striped table-bordered table-hover" id="contract-table"><thead><tr align="center">';
+    if(!empty($arr_title)){
+      $format_1 = "";
+      $format_2 = "";
+      foreach ($arr_title as $key => $value) {
+        $format_1 .= "<th>$value</th>";
+        $format_2 .= "<td>$arr_data[$key]</td>";
+        if($arr_data[$key] == end($arr_data)){
+          $format_2 .= '<td class="center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" ';
+          if(!empty($arr_attr)){
+            foreach ($arr_attr as $key => $value) {
+              $format_2 .= $value . " ";
+            }
+          }
+          $format_2 .= 'data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>';
+          $format_2 .= '<td class="center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>';
+          }
+        }
+    }   
+    $format_1 .= '<th colspan="2">Action</th>';
+    $format_1 .=   '</tr></thead><tbody><tr>';
+    $format_2 .= '</tr></tbody></table>';                
+    $format .= $format_1 . $format_2; 
+    echo $format;           
+  }
